@@ -1,3 +1,81 @@
 @import "base/reset";
 @import "base/typography";
 @import "base/color";
+@import 'components/tasklist';
+
+.grid-container {  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: auto 1.6fr auto;
+  gap: 40px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav nav nav"
+    "content content aside"
+    "footer footer footer";
+}
+
+
+
+.nav-cont {
+    display: flex;
+    list-style-type: none;
+    
+  }
+
+
+
+  .nav { grid-area: nav; 
+    padding: 14px 16px;
+    position: absolute;
+    display: flex;
+    font-size: 30px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+
+    
+
+  }
+  
+  li {
+    float: center;
+  // justify-content: space-between; 
+
+  }
+  
+  a {
+    display: block;
+    padding: 8px;
+    background-color: #242582;
+  }
+  
+  // .current {
+  //   background-color: #B3EAEA; 
+  //  }
+   
+
+ .content { grid-area: content; 
+// display: flex;
+// align-content: center;
+}
+
+// .aside { grid-area: aside; }
+
+// .footer { grid-area: footer; }
+
+
+
+  
+  
+  
+
+  
+ 
+  
+  
+
+  
+    
