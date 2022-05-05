@@ -7,8 +7,33 @@
 <!--    <link href="style.css" rel="stylesheet" type="text/css" /> -->
     <link href="/index.c74267d1.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
-    <h1>StudBud</h1>
+
+
+  <!--
+  <div class="grid-container">
+  -->
+    <body>
+    <nav class="nav">
+      <ul class="nav-cont">
+      <li><a class="current" href="">Task List</a></li>
+      <li><a href="">Timer</a></li>
+      <li><a href="">Music</a></li>
+      <li><a href="">Reading List</a></li><li>
+      </li></ul>
+    </nav>
+
+    <!--
+      <div class="content">
+    -->  
+      
+        <main class="main">
+<!-- 
+    <div id="page1-1" class="sub-page-container">
+     <h2>Task List</h2>
+     <div id="task-grid">
+-->  
+  
+  
     <form id="taskform">
       <label for="task">Task:</label>
       <input type="text" name="task" id="taskInput">
@@ -36,15 +61,36 @@
       <option value="Medium">Medium</option>
       <option value="High">High</option>
     </select>
-
+  
     <br>
-
       <button type="submit">Submit</button>
     </form>
     <ul id="tasklist">
+      <p id="emptyList">You have not added any tasks yet.</p>
     </ul>
-    <script src="/index.f3bd186e.js"></script>
+    <p id="diagnostic">Diagnostic</p>
+    <script src="/index.b90b7503.js"></script>
+<!--
+    <script src="script.js"></script>
+    <div id="tasklist">
+    <ul>
+    </ul>
+   </div>
+   <div class="aside"></div>
+      <div class="footer"></div>
+    </div>
+-->
+ 
+  <!-- <script src="scss/components/tasklist.js"></script>  
+  -->
+
+  </main>
     <!-- Swap the scripts to see the working solution -->
-    <!-- <script src="solution.js"></script> -->
+<!-- 
+      <script src="solution.js"></script>
+  
+  </div>  
+</div>
+-->
   </body>
 </html>

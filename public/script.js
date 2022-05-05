@@ -1,2 +1,2 @@
 //Import just as JS
-import './components/tasklist';
+import 'scss/components/tasklist';
