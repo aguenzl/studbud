@@ -1,0 +1,55 @@
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+}
+
+.timerDisplay {
+  width: 40%;
+  color: #fff;
+  background: #242582;
+  border-radius: 5px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+  font-family: Roboto mono, monospace;
+  font-size: 40px;
+  display: flex;
+  position: relative;
+  left: 30%;
+  box-shadow: 0 0 20px #008bfd40;
+}
+
+.buttons {
+  width: 50%;
+  justify-content: space-around;
+  margin: 60px auto 0;
+  display: flex;
+}
+
+.buttons button {
+  width: 120px;
+  height: 45px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #205e94;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+}
+
+.buttons button:nth-last-child(2) {
+  background-color: #d23332;
+}
+
+.buttons button:nth-last-child(1) {
+  background-color: #20b380;
+}
+
+/*# sourceMappingURL=timer.372aaf4d.css.map */

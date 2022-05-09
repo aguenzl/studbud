@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+}
+
+.todo-container {
+  width: 1000px;
+  height: 80vh;
+  display: flex;
+}
+
+.status {
+  width: 25%;
+  background-color: #f3f3f3;
+  padding: 60px 1rem .5rem;
+  position: relative;
+}
+
+.status:nth-child(2n) {
+  background-color: #e9e9e96b;
+}
+
+.status h1 {
+  color: #f3f3f3;
+  width: 100%;
+  background-color: #343434;
+  margin: 0;
+  padding: .5rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#add_btn {
+  width: 100%;
+  cursor: pointer;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+#add_btn:hover {
+  background-color: #aaa;
+}
+
+.todo {
+  background-color: #fff;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 0 1px #0f0f0f1a, 0 2px 4px #0f0f0f1a;
+}
+
+.todo .close {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+.todo .close:hover {
+  color: #343444;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.modal {
+  width: 450px;
+  z-index: 2;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: top .3s ease-in-out;
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal.active {
+  top: 15%;
+}
+
+.modal .header {
+  background-color: #0000000d;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  display: flex;
+}
+
+.modal .body {
+  padding: .75rem;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0000004d;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#overlay.active {
+  display: block;
+}
+
+.todo_input_text, #todo_submit {
+  width: 100%;
+  margin: .25rem;
+  padding: .5rem 1rem;
+}
+
+#todo_submit {
+  color: #f3f3f3;
+  background-color: #4caf50;
+  border: none;
+  font-size: 1.25rem;
+}
+
+/*# sourceMappingURL=tasklist.138b240e.css.map */
