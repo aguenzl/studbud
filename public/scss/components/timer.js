@@ -1,4 +1,4 @@
-let [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+let [centiseconds,seconds,minutes,hours] = [0,0,0,0];
 let timerRef = document.querySelector('.timerDisplay');
 let int = null;
 
@@ -15,14 +15,14 @@ document.getElementById('pauseTimer').addEventListener('click', ()=>{
 
 document.getElementById('resetTimer').addEventListener('click', ()=>{
     clearInterval(int);
-    [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+    [centiseconds,seconds,minutes,hours] = [0,0,0,0];
     timerRef.innerHTML = '00 : 00 : 00 : 00 ';
 });
 
 function displayTimer(){
-    milliseconds+=10;
-    if(milliseconds == 1000){
-        milliseconds = 0;
+    centiseconds+=1;
+    if(centiseconds == 100){
+        centiseconds = 0;
         seconds++;
         if(seconds == 60){
             seconds = 0;
@@ -37,7 +37,8 @@ function displayTimer(){
  let h = hours < 10 ? "0" + hours : hours;
  let m = minutes < 10 ? "0" + minutes : minutes;
  let s = seconds < 10 ? "0" + seconds : seconds;
- let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+ let cs = centiseconds < 10 ? "0" + centiseconds : centiseconds;  
+ // : centiseconds < 100 ? "0" + centiseconds : centiseconds;
 
- timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
+ timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${cs}`;
 }

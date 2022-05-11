@@ -30,7 +30,8 @@ body {
 .status h1 {
   color: #f3f3f3;
   width: 100%;
-  background-color: #343434;
+  background-color: #f64c72;
+  border: 2px solid #242582;
   margin: 0;
   padding: .5rem 1rem;
   position: absolute;
