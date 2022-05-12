@@ -4,84 +4,66 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-<!--    <link href="style.css" rel="stylesheet" type="text/css" /> -->
     <link href="/index.c74267d1.css" rel="stylesheet" type="text/css"> 
     <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
     <link href="/readinglist.ac4f0138.css" rel="stylesheet" type="text/css">
   </head>
+  
+  
+  <body>
+    <nav class="nav">
+      <ul class="nav-cont">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/tasklist.html">Task List</a></li>
+      <li><a href="/timer.html">Timer</a></li>
+      <li><a href="/music.html">Music</a></li>
+      <li><a class="current" href="/readinglist.html">Reading List</a></li><li>
+      </li></ul>
+    </nav>
 
-    <body>
-   
-      <nav class="nav">
-        <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/tasklist.html">Task List</a></li>
-        <li><a href="/timer.html">Timer</a></li>
-        <li><a href="/music.html">Music</a></li>
-        <li><a class="current" href="/readinglist.html">Reading List</a></li>
-      </ul>
-      </nav>
+    <div class="containerindex">
+      <main class="main">
+          <header class="header">Reading List</header>
 
-      <div class="containerindex">
-        <main class="main">
-            <header class="header">Reading List</header>
-              <div class="lefttext">Books  <input type="button" onclick="window.location.href = 'https://stackhowto.com';" value="Open all"></div>
-            <label class="container">Why Has Nobody Told Me This Before?
-              <input type="checkbox" checked="checked">
-              <span class="checkmark"></span>
-            </label>
-            
-            <label class="container">The Fitness Mindset
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            
-            <label class="container">Atomic Habits
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            
-            <label class="container">Think Again
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            
-              <div class="lefttext">Journal Articles  <input type="button" onclick="window.location.href = 'https://stackhowto.com';" value="Open all"></div>
-            <label class="container">Exercise is more than medicine: The working age population's well-being and productivity
-              <input type="checkbox" checked="checked">
-              <span class="checkmark"></span>
-            </label>
-            
-            <label class="container">Research: Knowledge Workers Are More Productive from Home
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            
-            <label class="container">Examining study habits in undergraduate STEM courses from a situative perspective
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            
-            <label class="container">Exercising at work and self-reported work performance
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            </main></div>
-            
-            
-              
-            
-            
-              
-            
-            
-        
-    <script src="/index.b90b7503.js"></script>
+          <div class="container">
+
+          </div>
 
 
 
+ <!-- modal -->
+ <div class="modal" id="todo_form">
+  <div class="header">
+    <div class="title">Add Task</div>
+    <button class="btn close-modal">&times;</button>
+  </div>
+  <div class="body">
+    Title: <input type="text" class="todo_input_title" id="todo_input_title">
+    Author: <input type="text" class="todo_input_author" id="todo_input_author">
+    Text Type: <select name="texttype" input="" type="label" class="todo_input_texttype" id="todo_input_texttype" <label="" for="texttype"><br>
+      <option value="">Select one</option>
+      <option value="Book">Book</option>
+      <option value="Journal Article">Journal Article</option>
+    </select>
+    <input type="submit" value="Add Task" id="todo_submit">
+  </div>
+</div>
+<!-- todo -->
+<div class="todo-container">
+  <div class="status" id="no_status">
+    <button id="add_btn" data-target-modal="#todo_form">+</button>
+    <div class="todo" draggable="true">
+      Title: The Fitness Mindset, Author: Brian Keane, Text Type: Book
+      <span class="close">&times;</span>
+    
+</div>
 
-</body>
+<div id="overlay"></div>
+
+    <script src="/readinglist.53fea4d4.js"></script>
+
+
+  </div></div></main>
+
+  </div></body>
 </html> 
-
-     

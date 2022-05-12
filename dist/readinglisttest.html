@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="/index.c74267d1.css" rel="stylesheet" type="text/css"> 
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+    <link href="/readinglisttest.1f8ca995.css" rel="stylesheet" type="text/css">
+  </head>
+  
+  
+  <body>
+    <nav class="nav">
+      <ul class="nav-cont">
+      <li><a href="/index.html">Home</a></li>
+      <li><a class="current" href="/tasklist.html">Task List</a></li>
+      <li><a href="/timer.html">Timer</a></li>
+      <li><a href="/music.html">Music</a></li>
+      <li><a href="/readinglist.html">Reading List</a></li><li>
+      </li></ul>
+    </nav>
+
+    <div class="containerindex">
+      <main class="main">
+          <header class="header">Task List</header>
+
+          <div class="container">
+
+          </div>
+
+
+
+ <!-- modal -->
+ <div class="modal" id="todo_form">
+  <div class="header">
+    <div class="title">Add Task</div>
+    <button class="btn close-modal">&times;</button>
+  </div>
+  <div class="task-title">
+    <div class="task-header">Task</div>
+    <input type="text" class="todo_input_text" id="todo_input_task">
+  </div>
+  <div class="body">
+    Due Date: <input type="date" class="todo_input_text" id="todo_input_duedate">
+    Estimated completion time (in mins): <input type="number" class="todo_input_text" id="todo_input_estcompletiontime">
+    Task Priority: <input type="text" class="todo_input_text" id="todo_input_taskpriority" <label="" for="priority">Task Priority:
+    <select name="prority" id="priorityInput">
+      <option value="">Select one</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <input type="submit" value="Add Task" id="todo_submit">
+  </div>
+</div>
+<!-- todo -->
+<div class="todo-container">
+  <div class="status" id="no_status">
+    <h1>No Status</h1>
+    <button id="add_btn" data-target-modal="#todo_form">+ Add Task</button>
+    <div class="todo" draggable="true">
+      Buy a Pizza
+      <span class="close">&times;</span>
+    </div>
+  </div>
+  <div class="status">
+    <h1>Not Started</h1>
+  </div>
+  <div class="status">
+    <h1>In Progress</h1>
+  </div>
+  <div class="status">
+    <h1>Done</h1>
+  </div>
+</div>
+
+<div id="overlay"></div>
+
+    <script src="/readinglisttest.985feade.js"></script>
+
+
+  </main>
+
+  </div></body>
+</html> 

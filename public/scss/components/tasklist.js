@@ -88,8 +88,11 @@ function createTodo() {
   const todo_div = document.createElement("div");
   const input_task_val = document.getElementById("todo_input_task").value;
   const input_duedate_val = document.getElementById("todo_input_duedate").value;
+  const input_estcompletiontime_val = document.getElementById("todo_input_estcompletiontime").value;
+  const input_priority_val = document.getElementById("todo_input_taskpriority").value;
+
 /* ARIELLA: extra fields in here like the line above */
-  const txt = document.createTextNode("Task: " + input_task_val + ", Due Date: " + input_duedate_val);
+  const txt = document.createTextNode("Task: " + input_task_val + ", Due Date: " + input_duedate_val + "Est Completion Time: " + input_estcompletiontime_val + ", Priority: " + input_priority_val);
 
   todo_div.appendChild(txt);
   todo_div.classList.add("todo");

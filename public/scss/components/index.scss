@@ -1,6 +1,6 @@
 
 
-  
+  // this sets the style of the image to fit the entire screen
   
   .broadimage {
     width: 100vw;
@@ -8,20 +8,19 @@
   }
   
   
-  .main {
-  position: relative;
-  width: 100%;
-   }
+  // .main {
+  // position: relative;
+  // width: 100%;
+  //  }
   
-  
-  .header {
-  font-size: 3vw;
-  text-align: center;
-  font-family: 'Inter';
-  color: #242582;
-  margin-bottom: 8vh;
-  /* margin-top: 8vh;  */
-  }
+  // .header {
+  // font-size: 3vw;
+  // text-align: center;
+  // font-family: 'Inter';
+  // color: yellow;
+  // margin-bottom: 8vh;
+  // /* margin-top: 8vh;  */
+  // }
   
   
   // @media screen and (max-width: 600px) {
@@ -44,7 +43,6 @@
   font-size: 1.5vw;
   font-family: 'Inter';
   text-align: center;
-  color: #242582;
   margin-bottom: 5vh; 
   margin-left: 5vw;
   margin-right: 5vw;

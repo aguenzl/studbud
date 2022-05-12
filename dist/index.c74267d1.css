@@ -81,7 +81,8 @@ nav > ul > li a:hover {
   color: #242582;
   margin-bottom: 8vh;
   font-family: Inter;
-  font-size: 3vw;
+  font-size: 2vw;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */
