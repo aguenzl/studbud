@@ -12,7 +12,6 @@
 }
 
 
-
 // .main { grid-area: 2 / 1 / 4 / 2; }
 
 
@@ -105,8 +104,9 @@ nav > ul > li a {
   display: block;
   padding: 13px 16px;
   text-decoration: none;
-  animation: fall linear;
-  animation-duration: 0.5s;
+
+  // animation: fall linear;
+  // animation-duration: 0.5s;
 }
 
 
@@ -125,15 +125,15 @@ transform:translateY(0px);
 
 
 
-@media screen and (max-width: 600px) {
-  nav > ul > li a {
-    font-size: 2vw;
-  }
-}
+// @media screen and (max-width: 600px) {
+//   nav > ul > li a {
+//     font-size: 10w;
+//   }
+// }
 
 
 nav > ul > li a:hover {
-  background-color: #B3EAEA;
+  background-color: #F64C72;
 }
 
 .navimage {
@@ -164,8 +164,61 @@ animation-duration: 0.5s;
 
   
   
+  .dropbtn {
+    font-family: 'Inter';
+    background-color: #242582;
+    color: white;
+    font-size: 1.5vw;
+    display: block;
+    padding: 13px 16px;
+    text-decoration: none;
+    // animation: fall linear;
+    // animation-duration: 0.5s; 
+  }
   
+/* Dropdown Button */
+.dropbtn {
+  border: none;
+  font-family: 'Inter';
+  color: white;
+  font-size: 1.5vw;
+  display: block;
+  padding: 13px 16px;
+  text-decoration: none;
+  
+}
 
+/* The container <div> - needed to position the dropdown content */
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #F64C72;}
+  
+  
   
  
   

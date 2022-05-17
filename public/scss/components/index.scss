@@ -1,12 +1,12 @@
 
 
+  
   // this sets the style of the image to fit the entire screen
   
   .broadimage {
     width: 100vw;
     margin-bottom:8vh;
   }
-  
   
   // .main {
   // position: relative;
@@ -22,12 +22,13 @@
   // /* margin-top: 8vh;  */
   // }
   
-  
-  // @media screen and (max-width: 600px) {
-  //   .header {
-  //   font-size: 8vw;
-  //   }
-  // }
+  // this makes the header mobile responsive as when the page loads on a smaller screen or on a mobile phone, 
+  // the header text is enlarged.
+  @media screen and (max-width: 600px) {
+    .header {
+    font-size: 5vw;
+    }
+  }
   
   
   
@@ -38,7 +39,9 @@
   // }
   
   
-  
+  // these are the stylistic elements of the body text. The font for all text is 'Inter' as it is a simple
+  // yet clean font. The margins are set so there is a reasonable amount of spacing between the body text and the header 
+  // text. 
   .bodytext {
   font-size: 1.5vw;
   font-family: 'Inter';
@@ -49,23 +52,24 @@
   
   }
   
-  .lefttext {
-  font-size: 1.5vw;
-  font-family: 'Inter';
-  text-align: left;
-  color: #242582;
-  margin-left: 3vh;
-  margin-bottom: 5vh; 
-  margin-top: 5vh;
+  // 
+  // .lefttext {
+  // font-size: 1.5vw;
+  // font-family: 'Inter';
+  // text-align: left;
+  // color: #242582;
+  // margin-left: 3vh;
+  // margin-bottom: 5vh; 
+  // margin-top: 5vh;
   
-  }
-  
-  
-  // @media screen and (max-width: 600px) {
-  //   .bodytext {
-  //     font-size: 5vw;
-  //   }
   // }
+  
+  
+  @media screen and (max-width: 600px) {
+    .bodytext {
+      font-size: 3vw;
+    }
+  }
   
   footer {
     overflow: hidden;
@@ -139,31 +143,31 @@
     display: block;
     padding: 13px 16px;
     text-decoration: none;
-    animation: fall linear;
-    animation-duration: 0.5s;
+    // animation: fall linear;
+    // animation-duration: 0.5s;
   }
   
   
   
-  @keyframes fall {
-  0% {
-    transform:translateY(-100px);
+  // @keyframes fall {
+  // 0% {
+  //   transform:translateY(-100px);
   
-  }
-  
-  
-  100% {
-  transform:translateY(0px);
-  }
-  }
+  // }
   
   
+  // 100% {
+  // transform:translateY(0px);
+  // }
+  // }
   
-  @media screen and (max-width: 600px) {
-    nav > ul > li a {
-      font-size: 2vw;
-    }
-  }
+  
+  
+  // @media screen and (max-width: 600px) {
+  //   nav > ul > li a {
+  //     font-size: 2vw;
+  //   }
+  // }
   
   
  nav > ul > li a:hover {
@@ -171,9 +175,13 @@
    }
   
  .navimage {
-  max-width:5vw;
-   animation: fall linear;
-  animation-duration: 0.5s;
+  max-width:3.5vw;
+  margin-right: 2vw;
+  margin-left: 0.5vw;
+
+
+  //  animation: fall linear;
+  // animation-duration: 0.5s;
  }
   
   

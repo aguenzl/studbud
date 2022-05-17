@@ -11,17 +11,51 @@ body {
 .flowDisplay {
   width: 40%;
   color: #fff;
-  background-color: #000;
+  background-color: #242582;
   border-radius: 5px;
   justify-content: space-around;
   align-items: center;
-  padding: 40px 0;
+  margin-bottom: 2vh;
+  padding: 30px 0;
   font-family: Roboto mono, monospace;
-  font-size: 40px;
+  font-size: 2.5vw;
   display: flex;
   position: relative;
   left: 30%;
-  box-shadow: 0 0 20px #008bfd40;
+  box-shadow: 0 0 20px #00017440;
+}
+
+.breakDisplay {
+  width: 30%;
+  color: #fff;
+  background-color: #242582;
+  border-radius: 5px;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2vh;
+  padding: 10px 0;
+  font-family: Roboto mono, monospace;
+  font-size: 1.5vw;
+  display: flex;
+  position: relative;
+  left: 35%;
+  box-shadow: 0 0 20px #00017440;
+}
+
+.interruptDisplay {
+  width: 30%;
+  color: #fff;
+  background-color: #242582;
+  border-radius: 5px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  font-family: Roboto mono, monospace;
+  font-size: 1.5vw;
+  display: flex;
+  position: relative;
+  left: 35%;
+  box-shadow: 0 0 20px #00017440;
 }
 
 .buttons {
@@ -55,8 +89,34 @@ body {
   background-color: red;
 }
 
-#endFlow {
-  background-color: #000;
+.bodytext {
+  color: #242582;
+  text-align: center;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-family: Inter;
+  font-size: 1vw;
+}
+
+.flowLogTitle {
+  color: #242582;
+  text-align: center;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-family: Inter;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.flowLog {
+  color: #242582;
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-family: Inter;
+  font-size: 1vw;
 }
 
 /*# sourceMappingURL=flowtimetracker.ca83ccb6.css.map */

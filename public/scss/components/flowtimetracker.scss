@@ -1,3 +1,5 @@
+
+// sets the sizing of the box so it is not massive. 
 *,
 *:before,
 *:after{
@@ -11,21 +13,61 @@ body{
 }
 
 
+
+// sets the stylistic elements of the timer. Identical to the characteristics of the stopwatch timer. 
 .flowDisplay {
     position: relative;
     width: 40%;
     // background: #242582;
-    background-color: black;
+    background-color:#242582;
     left: 30%;
-    padding: 40px 0;
+    padding: 30px 0;
     font-family: 'Roboto mono',monospace;
     color: white;
-    font-size: 40px;
+    font-size: 2.5vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0,139,253,0.25);
+    box-shadow: 0 0 20px rgba(0,1,116,0.25);
+    margin-bottom: 2vh;
+}
+
+
+.breakDisplay {
+  position: relative;
+  width: 30%;
+  // background: #242582;
+  background-color: #242582;
+  left: 35%;
+  padding: 10px 0;
+  font-family: 'Roboto mono',monospace;
+  color: white;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,1,116,0.25);
+  margin-bottom: 2vh;
+
+}
+
+.interruptDisplay {
+  position: relative;
+  width: 30%;
+  // background: #242582;
+  background-color: #242582;
+  left: 35%;
+  padding: 10px 0;
+  font-family: 'Roboto mono',monospace;
+  color: white;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,1,116,0.25);
 }
 
 .buttons{
@@ -52,25 +94,56 @@ body{
   // color: white; 
 // }
 
+
+// the control flow refers to the flow timer tracker starting and stop - meaning it is the 'Start Flow' button. It is set to green. 
 #controlFlow {
   background-color: green;
 }
-
+// the break flow refers to when the user wants to take a break. This is an intentional pause. It is set to orange. 
 #breakFlow {
   background-color: orange;
 }
 
+// this is when the user reports an external unintentional interruption. It is set to red. 
 #interruptFlow {
   background-color: red;
 }
 
-#endFlow {
-  background-color: black;
-}
-// .buttons button:nth-last-child(2){
-//     background-color: #F64C72;
-//   }
-//   .buttons button:nth-last-child(1){
-//     background-color: #FF013A;
-//   }
+ // the standard stylistic elements of the body text. Spacing is given on the left, right and bottom so it is spaced
+ // out evenly from everything else. 
+.bodytext {
+  font-size: 1vw;
+  font-family: 'Inter';
+  color: #242582;
+  text-align: center;
+  margin-bottom: 5vh; 
+  margin-left: 5vw;
+  margin-right: 5vw;
+  
+  }
 
+
+
+
+  .flowLogTitle {
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Inter';
+    color: #242582;
+    text-align: center;
+    margin-top: 10vh; 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    }
+
+  .flowLog {
+  font-size: 1vw;
+  font-family: 'Inter';
+  color: #242582;
+  text-align: center;
+  // margin-top: 10vh; 
+  margin-left: 5vw;
+  margin-right: 5vw;
+  }
+
+  

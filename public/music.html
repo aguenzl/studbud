@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="shortcut icon" type = "image/png" href = "images/favicon.png"
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
@@ -11,18 +12,27 @@
   </head>
 
     <body>
-   
+      <div class="containerindex">
+
       <nav class="nav">
         <ul>
-        <li><a href = "index.html">Home</a></li>
+          <li><img src = "./images/logo.png" class = "navimage"></a></li>
+          <li><a href ="index.html">Home</a></li>
         <li><a href="tasklist.html">Task List</a></li>
-        <li><a href="timer.html">Timer</a></li>
-        <li><a class = "current" href="music.html">Music</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Timer</button>
+          <div class="dropdown-content">
+            <a href="stopwatch.html">Stopwatch</a>
+            <a href="flowtimetracker.html">Flow Time Tracker</a>
+          </div>
+        </div></li>
+                      <li><a href="music.html">Music</a></li>
         <li><a href="readinglist.html">Reading List</a></li>
+        <li><a class = "current" href="musictest.html">Test</a></li>
       </ul>
       </nav>
 
-      <div class="containerindex">
+
         <main class = "main">
             <header class = "header">Music</header>
 

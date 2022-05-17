@@ -1,0 +1,75 @@
+// *,
+// *:before,
+// *:after{
+//     padding: 0;
+//     margin: 0;
+//     box-sizing: border-box;
+// }
+
+body{
+  background: white;
+}
+
+// .container{
+//     background-color: #F64C72;
+//     width: 40%;
+//     min-width: 500px;
+//     position: absolute;
+//     transform: translate(-50%,-50%);
+//     top: 50%;
+//     left: 50%;
+//     padding: 20px 0;
+//     padding-bottom: 50px;
+//     border-radius: 10px;
+// }
+
+//Sets the style for the timer. Positions it in the centre of the screen with the digits evenly spaced out. 
+// The box is given a dark blue shadow. 
+.timerDisplay{
+    position: relative;
+    width: 40%;
+    background: #242582;
+    left: 30%;
+    padding: 40px 0;
+    font-family: 'Roboto mono',monospace;
+    color: white;
+    font-size: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,1,116,0.25);
+}
+
+// the three buttons are spaced evenly from each other underneath the timer box. 
+.buttons{
+    width: 50%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+// The stylistic elements of the button. All the buttons are currently set to orange. The sizing of the buttons is set. 
+// When the mouse hovers over the buttons it turns into a pointer finger. 
+.buttons button{
+    width: 120px;
+    height: 45px;
+    background-color: orange;
+    color: #ffffff;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+// this sets the second button aka second last child to green.
+.buttons button:nth-last-child(2){
+    background-color: green;
+  }
+  
+  // this sets the last button to red. 
+  .buttons button:nth-last-child(1){
+    background-color: red;
+  }

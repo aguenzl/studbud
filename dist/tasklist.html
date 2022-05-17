@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="/favicon.effec35d.png" <link="" <meta="" charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="/index.c74267d1.css" rel="stylesheet" type="text/css"> 
@@ -11,28 +11,37 @@
   
   
   <body>
-    <nav class="nav">
-      <ul class="nav-cont">
-      <li><a href="/index.html">Home</a></li>
-      <li><a class="current" href="/tasklist.html">Task List</a></li>
-      <li><a href="/timer.html">Timer</a></li>
-      <li><a href="/music.html">Music</a></li>
-      <li><a href="/readinglist.html">Reading List</a></li><li>
-      </li></ul>
-    </nav>
 
+
+<!-- The class for 'Task List' is set to current as that is the page the user is on. -->
     <div class="containerindex">
+      <nav class="nav">
+        <ul>
+        <!-- <li><img src = "./images/logo.png" class = "navimage"></a></li> -->
+        <li><a href="/index.html">Home</a></li>
+        <li><a class="current" href="/tasklist.html">Task List</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Timer</button>
+          <div class="dropdown-content">
+            <a href="/stopwatch.html">Stopwatch</a>
+            <a href="/flowtimetracker.html">Flow Time Tracker</a>
+          </div>
+        </div></li>
+                      <li><a href="/music.html">Music</a></li>
+        <li><a href="/readinglist.html">Reading List</a></li>
+        <li><a href="/musictest.html">Test</a></li>
+      </ul>
+      </nav>
       <main class="main">
           <header class="header">Task List</header>
+     
+
 
           <div class="container">
-
-          </div>
-
-
-
- <!-- modal -->
- <div class="modal" id="todo_form">
+<!-- This is the modal. The modal is the form that pops up when '+ Add Task' is clicked, where the user can fill out
+details about the task. They click 'Add Task' after filling out the details and it will automatically pop up under "No Status".
+The user can then drag the task around to  -->
+<div class="modal" id="todo_form">
   <div class="header">
     <div class="title">Add Task</div>
     <button class="btn close-modal">&times;</button>
@@ -42,6 +51,9 @@
     <input type="text" class="todo_input_text" id="todo_input_task">
   </div>
   <div class="body">
+    <!-- The user inputs the details below. The due date input time is set to a date format and the class and id is set so it can 
+    be referred to in css and javascript. the estimated completion time requires inputting a number, and the task priority is a drop down 
+    menu where the user must select one of the three options.  -->
     Due Date: <input type="date" class="todo_input_text" id="todo_input_duedate">
     Estimated completion time (in mins): <input type="number" class="todo_input_text" id="todo_input_estcompletiontime">
     Task Priority: <select name="priority" input="" type="label" class="todo_input_text" id="todo_input_taskpriority" <label="" for="priority"><br>
@@ -50,10 +62,11 @@
       <option value="Medium">Medium</option>
       <option value="High">High</option>
     </select>
+    <!-- This submits the data and makes it reflect on the screen. -->
     <input type="submit" value="Add Task" id="todo_submit">
   </div>
 </div>
-<!-- todo -->
+<!-- The todo container -->
 <div class="todo-container">
   <div class="status" id="no_status">
     <h1>No Status</h1>
@@ -73,6 +86,12 @@
     <h1>Done</h1>
   </div>
 </div>
+          </div>
+
+     
+          
+
+ 
 
 <div id="overlay"></div>
 

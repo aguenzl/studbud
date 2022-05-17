@@ -4,37 +4,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <!-- this sets the favicon of the page to the corresponding image of the StudBud logo -->
+    <link rel="shortcut icon" type="image/png" href="/favicon.effec35d.png" <meta="" charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
+    <!-- link the html page to corresponding css page -->
     <link href="/index.c74267d1.css" rel="stylesheet" type="text/css"> 
     <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
     <link href="/flowtimetracker.ca83ccb6.css" rel="stylesheet" type="text/css">
   </head>
 
     <body>
-   
+   <!-- create nav bar with dropdown menu for both timers. Set the class for flow time tracker to 'current' to show 
+   the user they are currently on that page. -->
       <nav class="nav">
         <ul>
-        <li><a href="/index.html">Home</a></li>
+          <li><img src="/logo.b5bfa736.png" class="navimage"></li>
+          <li><a href="/index.html">Home</a></li>
         <li><a href="/tasklist.html">Task List</a></li>
-        <li><a href="/timer.html">Timer</a></li>
-        <li><a class="current" href="/flowtimetracker.html">Flow Time Tracker</a></li>
-        <li><a href="/music.html">Music</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Timer</button>
+          <div class="dropdown-content">
+            <a href="/stopwatch.html">Stopwatch</a>
+            <a class="current" href="/flowtimetracker.html">Flow Time Tracker</a>
+          </div>
+        </div></li>
+                      <li><a href="/music.html">Music</a></li>
         <li><a href="/readinglist.html">Reading List</a></li>
+        <li><a href="/musictest.html">Test</a></li>
       </ul>
       </nav>
 
+      <!-- set title to Flow Time Tracker. -->
       <div class="containerindex">
         <main class="main">
             <header class="header">Flow Time Tracker</header>
 
             <div class="container">
- 
+              <div class="bodytext">
+                The flow time tracker can be used to track the duration of tasks.
+                Please click the <b>Start Flow</b> button to start the timer. 
+                If you decide to take a break, please click the <b>Start Break</b> button. 
+                If you experience any interruptions that take you away from completing the task, please select the <b>Start Interruption</b> button.
+                Click <b>End Flow</b> when the task is completed and a full breakdown of task duration will be displayed, including the break and interruption times.
+
             </div>
 
             <div class="flowDisplay">
-              <ul id="flowTimer"> 00 : 00 : 00 </ul>
+              <ul id="flowTimer"> Flow = 00 : 00 : 00 </ul>
+             </div>
+
+             <div class="breakDisplay">
+              <ul id="breakTimer"> Break = 00 : 00 : 00 </ul>
+             </div>
+            
+             <div class="interruptDisplay">
+              <ul id="interruptTimer"> Interruption = 00 : 00 : 00 </ul>
              </div>
 
              <div class="buttons">
@@ -43,12 +68,15 @@
                 <button id="interruptFlow">Start Interruption</button>
               </div>
 
+              <div class="flowLogTitle">Flow Log</div>
+              <div class="flowLog"></div>
+         
 
             <script src="/flowtimetracker.1ea6d9a8.js"></script>
 
 
 
     
-        </main>
+        </div></main>
         </div></body>
       </html>

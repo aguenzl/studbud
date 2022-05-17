@@ -3,6 +3,12 @@
   margin-bottom: 8vh;
 }
 
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 5vw;
+  }
+}
+
 .bodytext {
   text-align: center;
   margin-bottom: 5vh;
@@ -12,14 +18,10 @@
   font-size: 1.5vw;
 }
 
-.lefttext {
-  text-align: left;
-  color: #242582;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 3vh;
-  font-family: Inter;
-  font-size: 1.5vw;
+@media screen and (max-width: 600px) {
+  .bodytext {
+    font-size: 3vw;
+  }
 }
 
 footer {
@@ -73,24 +75,7 @@ nav > ul > li a {
   font-family: Inter;
   font-size: 1.5vw;
   text-decoration: none;
-  animation: fall .5s linear;
   display: block;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-100px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  nav > ul > li a {
-    font-size: 2vw;
-  }
 }
 
 nav > ul > li a:hover {
@@ -98,8 +83,9 @@ nav > ul > li a:hover {
 }
 
 .navimage {
-  max-width: 5vw;
-  animation: fall .5s linear;
+  max-width: 3.5vw;
+  margin-left: .5vw;
+  margin-right: 2vw;
 }
 
 @media screen and (max-width: 600px) {

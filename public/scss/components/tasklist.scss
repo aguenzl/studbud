@@ -2,15 +2,19 @@
     box-sizing: border-box;
   }
   
+  // style the header so it's bigger than the other writing and in the centre.
   .header {
     font-size: 2vw;
     text-align: center;
     font-family: 'Inter';
     color: #242582;
-    margin-bottom: 1vh;
+    margin-top: 5vh;
+    display: flex; 
+    justify-content: center;
     /* margin-top: 8vh;  */
     }
 
+// this is the title when the modal pops up. 
   .task-header {
     font-size: 2vw;
     text-align: center;
@@ -19,21 +23,24 @@
     margin-bottom: 2vh;
   }
 
+  // style the input titles when the modal pops up.
   body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Inter";
     min-height: 100vh;
     display: flex;
     justify-content: center;
   }
   
+  // style the columns and give them a pink border. 
   .todo-container {
     width: 1000px;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     border: 1px solid #F64C72;
 
   }
   
+  // style the columns. 
   .status {
     width: 25%;
     background-color: #FE7C99;
@@ -41,22 +48,27 @@
     padding: 60px 1rem 0.5rem;
   }
   
+  // change the colour of every even column to a lighter pink. 
   .status:nth-child(even) {
     background-color: #FFA4B8;
   }
   
+  // style the top column where the status headings are located. Give them a blue border so they stand out and make sure 
+  // they're located in the centre of the page.
   .status h1 {
     position: absolute;
     top: 0;
     left: 0;
     background-color: #F64C72;
-    border: 1px solid #242582;
+    border: 1.5px solid #242582;
     color: #f3f3f3;
     margin: 0;
     width: 100%;
     padding: 0.5rem 1rem;
   }
-  
+
+  // this is the '+ Add Task' button. It is set to blue with white writing. The cursor changes to a pointer when 
+  // it hovers so it looks like a button.
   #add_btn {
     padding: 0.5rem 1rem;
     background-color: #242582;
@@ -69,11 +81,15 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  
+ 
+  // the button changes to a lighter blue when hovered over.
   #add_btn:hover {
     background-color: #0B0EE3;
   }
   
+
+  // this is the contents inside the specific task. It is set to fit the writing spaced evenly. There is a shadow
+  // to make it look 3D.
   .todo {
     display: flex;
     justify-content: space-between;
@@ -84,11 +100,12 @@
       rgba(15, 15, 15, 0.1) 0px 2px 4px;
     border-radius: 4px;
     padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    font-size: 2vh;
     margin: 0.5rem 0;
     
   }
   
+  // this is the cross next to the task where they can be deleted. It is set to a small size and positioned next to the writing.
   .todo .close {
     position: absolute;
     right: 1rem;
@@ -98,20 +115,22 @@
     cursor: pointer;
   }
   
+  //when the user hovers over the 'x' it changes to a dark grey colour. 
   .todo .close:hover {
     color: #343444;
   }
   
   /* modal */
   
-  .close-modal {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
+  // .close-modal {
+  //   background: none;
+  //   border: none;
+  //   font-size: 1.5rem;
   
 
-  }
+  // }
   
+  // set the style features for the modal. the animation is set so it slides down from the top of the screen.
   .modal {
     width: 450px;
     position: fixed;
@@ -125,10 +144,11 @@
     background-color: #fff;
   }
   
+  
   .modal.active {
     top: 15%;
   }
-  
+  // style the header of the pop up.
   .modal .header {
     display: flex;
     justify-content: space-between;
@@ -142,20 +162,22 @@
     padding: 0.75rem;
   }
   
-  #overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+  // #overlay {
+  //   display: none;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 0, 0, 0.3);
   
-  }
+  // }
   
-  #overlay.active {
-    display: block;  }
+  // #overlay.active {
+  //   display: block;  }
   
+
+    
   .todo_input_text
   {
     padding: 0.5rem 1rem;
@@ -163,17 +185,18 @@
     margin: 0.25rem;
   }
   
-  #todo_submit {
-    padding: 0.5rem 1rem;
-    width: 100%;
-    margin: 0.25rem;
 
-  }
   
+
+  // set the style features of the submit button.
   #todo_submit {
     background-color: #4caf50;
     color: #f3f3f3;
     font-size: 1.25rem;
     border: none;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin: 0.25rem;
+
 
   }
