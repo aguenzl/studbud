@@ -28,7 +28,7 @@
         </div></li>
                       <li><a href="music.html">Music</a></li>
         <li><a href="readinglist.html">Reading List</a></li>
-        <li><a href="musictest.html">Test</a></li>
+        <li><a class = "current" href="musictest.html">Test</a></li>
       </ul>
       </nav>
 
@@ -37,32 +37,11 @@
             <header class = "header">Music Test</header>
 
             <div class="container">
-              <div class="music-container" id="music-container">
-                <div class="music-info">
-                  <h4 id="title"></h4>
-                  <div class="progress-container" id="progress-container">
-                    <div class="progress" id="progress"></div>
-                  </div>
-                </div>
-          
-                <audio src="./music/ukulele.mp3" id="audio"></audio>
-          
-                <div class="img-container">
-                  <img src="images/ukulele.jpg" alt="music-cover" id="cover" />
-                </div>
-                <div class="navigation">
-                  <button id="prev" class="action-btn">
-                    <i class="fas fa-backward"></i>
-                  </button>
-                  <button id="play" class="action-btn action-btn-big">
-                    <i class="fas fa-play"></i>
-                  </button>
-                  <button id="next" class="action-btn">
-                    <i class="fas fa-forward"></i>
-                  </button>
-                </div>
-              </div>
-    
+
+              <iframe title="deezer-widget" src="https://widget.deezer.com/widget/light/playlist/1313616925" width="80%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+            </div>
+            <div class = "bodytext">Music widget kindly provided by <a href = "https://deezer.com">Deezer</a> </div>  
+
 
 
             <script src="scss/components/musictest.js"></script>

@@ -207,10 +207,10 @@ function displayFlow() {
             flowHours++;
         }
     }
-    // let fh = flowHours < 10 ? "0" + flowHours : flowHours;
-    // let fm = flowMinutes < 10 ? "0" + flowMinutes : flowMinutes;
-    // let fs = flowSeconds < 10 ? "0" + flowSeconds : flowSeconds;
-    // flowRef.innerHTML = `Flow = ${fh} : ${fm} : ${fs} `;
+    let fh = flowHours < 10 ? "0" + flowHours : flowHours;
+    let fm = flowMinutes < 10 ? "0" + flowMinutes : flowMinutes;
+    let fs = flowSeconds < 10 ? "0" + flowSeconds : flowSeconds;
+    flowRef.innerHTML = `Flow = ${fh} : ${fm} : ${fs} `;
     // Format the string so when the 'End Flow' is clicked, the total flow time is displayed.
     flowRef.innerHTML = 'Flow = ' + formatTimeString(flowHours, flowMinutes, flowSeconds);
 }
@@ -225,10 +225,10 @@ function displayBreak() {
             breakHours++;
         }
     }
-    // let bh = breakHours < 10 ? "0" + breakHours : breakHours;
-    // let bm = breakMinutes < 10 ? "0" + breakMinutes : breakMinutes;
-    // let bs = breakSeconds < 10 ? "0" + breakSeconds : breakSeconds;
-    // breakRef.innerHTML = `Break = ${bh} : ${bm} : ${bs} `;
+    let bh = breakHours < 10 ? "0" + breakHours : breakHours;
+    let bm = breakMinutes < 10 ? "0" + breakMinutes : breakMinutes;
+    let bs = breakSeconds < 10 ? "0" + breakSeconds : breakSeconds;
+    breakRef.innerHTML = `Break = ${bh} : ${bm} : ${bs} `;
     // Format the string so when the 'End Break' is clicked, the time of the break is displayed.
     breakRef.innerHTML = 'Break = ' + formatTimeString(breakHours, breakMinutes, breakSeconds);
 }
@@ -243,10 +243,10 @@ function displayInterrupt() {
             interruptHours++;
         }
     }
-    // let ih = interruptHours < 10 ? "0" + interruptHours : interruptHours;
-    // let im = interruptMinutes < 10 ? "0" + interruptMinutes : interruptMinutes;
-    // let is = interruptSeconds < 10 ? "0" + interruptSeconds : interruptSeconds;
-    // interruptRef.innerHTML = `Interruption = ${ih} : ${im} : ${is} `;
+    let ih = interruptHours < 10 ? "0" + interruptHours : interruptHours;
+    let im = interruptMinutes < 10 ? "0" + interruptMinutes : interruptMinutes;
+    let is = interruptSeconds < 10 ? "0" + interruptSeconds : interruptSeconds;
+    interruptRef.innerHTML = `Interruption = ${ih} : ${im} : ${is} `;
     // Format the string so when the 'End Interruption' is clicked, the time of the interruption is displayed.
     interruptRef.innerHTML = 'Interruption = ' + formatTimeString(interruptHours, interruptMinutes, interruptSeconds);
 }

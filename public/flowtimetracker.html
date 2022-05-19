@@ -42,6 +42,7 @@
             <header class = "header">Flow Time Tracker</header>
 
             <div class="container">
+<!-- Explain the premise of the flow time tracker and how it can be used for good user experience.  -->
               <div class = "bodytext">
                 The flow time tracker can be used to track the duration of tasks.
                 Please click the <b>Start Flow</b> button to start the timer. 
@@ -50,29 +51,30 @@
                 Click <b>End Flow</b> when the task is completed and a full breakdown of task duration will be displayed, including the break and interruption times.
 
             </div>
-
+<!-- Set up the timer for the flow - this is the time the user actually spends doing the task. -->
             <div class="flowDisplay">
-              <ul id = 'flowTimer'> Flow = 00 : 00 : 00 </ul>
+            <ul id = 'flowTimer'> Flow = 00 : 00 : 00 </ul>
              </div>
-
+<!-- Set up the timer for the breaks. This is the intentional pauses the user has - they are not working on the task. -->
              <div class="breakDisplay">
               <ul id = 'breakTimer'> Break = 00 : 00 : 00 </ul>
              </div>
-            
+<!-- Set up the timer for the interruptions. This is the unintentional pauses the user has - they are not working on the task. --> -->
              <div class="interruptDisplay">
               <ul id = 'interruptTimer'> Interruption = 00 : 00 : 00 </ul>
              </div>
-
+<!-- Set up the buttons that trigger the three timers. -->
              <div class="buttons">
                 <button id="controlFlow">Start Flow</button>
                 <button id="breakFlow">Start Break</button>
                 <button id="interruptFlow">Start Interruption</button>
               </div>
+             <!-- Set up the flow log where the duration of the flow, breaks and interruptions are displayed.  -->
 
               <div class="flowLogTitle">Flow Log</div>
               <div class="flowLog"></div>
          
-
+<!-- Link to the corresponding javascript page. -->
             <script src="scss/components/flowtimetracker.js"></script>
 
 

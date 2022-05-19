@@ -1,14 +1,14 @@
-const todos = document.querySelectorAll(".todo");
-const all_status = document.querySelectorAll(".status");
-let draggableTodo = null;
+const rlists = document.querySelectorAll(".rlistitem");
+// const all_status = document.querySelectorAll(".status");
+let draggablerlist = null;
 
-todos.forEach((todo) => {
-  todo.addEventListener("dragstart", dragStart);
-  todo.addEventListener("dragend", dragEnd);
+rlists.forEach((rlist) => {
+  rlist.addEventListener("dragstart", dragStart);
+  rlist.addEventListener("dragend", dragEnd);
 });
 
 function dragStart() {
-  draggableTodo = this;
+  draggablerlist = this;
   setTimeout(() => {
     this.style.display = "none";
   }, 0);
@@ -16,19 +16,19 @@ function dragStart() {
 }
 
 function dragEnd() {
-  draggableTodo = null;
+  draggablerlist = null;
   setTimeout(() => {
     this.style.display = "block";
   }, 0);
   console.log("dragEnd");
 }
 
-all_status.forEach((status) => {
-  status.addEventListener("dragover", dragOver);
-  status.addEventListener("dragenter", dragEnter);
-  status.addEventListener("dragleave", dragLeave);
-  status.addEventListener("drop", dragDrop);
-});
+//all_status.forEach((status) => {
+//  status.addEventListener("dragover", dragOver);
+//  status.addEventListener("dragenter", dragEnter);
+//  status.addEventListener("dragleave", dragLeave);
+//  status.addEventListener("drop", dragDrop);
+//});
 
 function dragOver(e) {
   e.preventDefault();
@@ -47,7 +47,7 @@ function dragLeave() {
 
 function dragDrop() {
   this.style.border = "none";
-  this.appendChild(draggableTodo);
+  this.appendChild(draggablerlist);
   console.log("dropped");
 }
 
@@ -79,44 +79,65 @@ window.onclick = (event) => {
   }
 };
 
-/* create todo  */
-const todo_submit = document.getElementById("todo_submit");
+/* create rlist  */
+const rlist_submit = document.getElementById("rlist_submit");
 // let date = (new Date()).toLocaleDateString('en-US');
-todo_submit.addEventListener("click", createTodo);
+rlist_submit.addEventListener("click", createrlist);
 
-function createTodo() {
-  const todo_div = document.createElement("div");
-  const input_texttype_val = document.getElementById("todo_input_texttype").value;
-  const input_author_val = document.getElementById("todo_input_author").value;
-  const input_title_val = document.getElementById("todo_input_title").value;
+function createrlist() {
+  let rlist_container = document.getElementById("rlist_container");
+  const rlist_div = document.createElement("div");
+  const input_texttype_val = document.getElementById("rlist_input_texttype").value;
+  const input_author_val = document.getElementById("rlist_input_author").value;
+  const input_title_val = document.getElementById("rlist_input_title").value;
+  const input_url_val = document.getElementById("rlist_input_url").value;
 
 /* ARIELLA: extra fields in here like the line above */
-  const txt = document.createTextNode("Title: " + ", Author: " + input_author_val + input_title_val + ", Text Type: " + input_texttype_val);
+  const txt = document.createTextNode("Title: " + input_title_val + ", Author: " + input_author_val  + ", Text Type: " + input_texttype_val);
 
-  todo_div.appendChild(txt);
-  todo_div.classList.add("todo");
-  todo_div.setAttribute("draggable", "true");
+  rlist_div.appendChild(txt);
+  rlist_div.classList.add("rlistitem");
+  rlist_div.setAttribute("draggable", "true");
 
-  /* create span */
-  const span = document.createElement("span");
+  /* create the pop out span */
+  const span_popout = document.createElement("span");
+  var eimg_popout = document.createElement("img");
+  eimg_popout.setAttribute("src", "./images/popout.png");
+  eimg_popout.setAttribute("height", "8");
+  eimg_popout.setAttribute("width", "8");
+  eimg_popout.setAttribute("alt", "Pop out to link");
+  eimg_popout.setAttribute("href", input_url_val);
+  span_popout.appendChild(eimg_popout);
+  rlist_div.appendChild(span_popout);
+
+  /* create the pen (edit) span */
+
+  /* create the close span */
+  const span_close = document.createElement("span");
   const span_txt = document.createTextNode("\u00D7");
-  span.classList.add("close");
-  span.appendChild(span_txt);
+  span_close.classList.add("close");
+  span_close.appendChild(span_txt);
+  rlist_div.appendChild(span_close);
 
-  todo_div.appendChild(span);
+  // save the URL as an attribute for use when the user clicks the 'Open All Links' button
+  // rlist_div.setAttribute('URL', input_url_val);
 
-  no_status.appendChild(todo_div);
+  // add the listener for when they click on the item, it opens a new window with the URL
+  // rlist_div.addEventListener('click', function() { window.open(input_url_val, '_blank');}, false);
+  
+  /* Add this list item div to the container */
+  rlist_container.appendChild(rlist_div);
 
   span.addEventListener("click", () => {
     span.parentElement.style.display = "none";
   });
-  //   console.log(todo_div);
+  //   console.log(rlist_div);
 
-  todo_div.addEventListener("dragstart", dragStart);
-  todo_div.addEventListener("dragend", dragEnd);
+  rlist_div.addEventListener("dragstart", dragStart);
+  rlist_div.addEventListener("dragend", dragEnd);
 
-  // document.getElementById("todo_input_task").value = "";
-  todo_form.classList.remove("active");
+  // document.getElementById("rlist_input_task").value = "";
+  rlist_form.classList.remove("active");
   overlay.classList.remove("active");
 }
 

@@ -1,3 +1,5 @@
+<!-- https://stackoverflow.com/questions/20893280/make-a-div-a-link-in-javascript -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -41,30 +43,35 @@
 
 
  <!-- modal -->
- <div class="modal" id="todo_form">
+ <div class="modal" id="rlist_form">
   <div class="header">
-    <div class="title">Add Task</div>
+    <div class="title">Add Reading List Item</div>
     <button class="btn close-modal">&times;</button>
   </div>
   <div class="body">
-    Title: <input type="text" class="todo_input_title" id="todo_input_title">
-    Author: <input type="text" class="todo_input_author" id="todo_input_author">
-    Text Type: <select name="texttype" input="" type="label" class="todo_input_texttype" id="todo_input_texttype" <label="" for="texttype"><br>
+    Title: <input type="text" class="rlist_input_text" id="rlist_input_title"><br>
+    Author: <input type="text" class="rlist_input_text" id="rlist_input_author"><br>
+    Text Type: <select name="texttype" input="" type="label" class="rlist_input_text" id="rlist_input_texttype" <label="" for="texttype">
       <option value="">Select one</option>
       <option value="Book">Book</option>
       <option value="Journal Article">Journal Article</option>
-    </select>
-    <input type="submit" value="Add Task" id="todo_submit">
+    </select><br>
+    URL: <input type="text" class="rlist_input_text" id="rlist_input_url">
+    <input type="submit" value="Add Item" id="rlist_submit">
   </div>
 </div>
-<!-- todo -->
-<div class="todo-container">
-  <div class="status" id="no_status">
-    <button id="add_btn" data-target-modal="#todo_form">+</button>
-    <div class="todo" draggable="true">
-      Title: The Fitness Mindset, Author: Brian Keane, Text Type: Book
+<!-- rlist -->
+<div><button id="add_btn" data-target-modal="#rlist_form">+</button></div>
+<div class="rlist_container" id="rlist_container">
+  <!-- <div class="status" id="no_status"> -->
+    <div class="rlistitem" draggable="true">
+      Title: Book 1, Author: Brian Keane, Text Type: Book
       <span class="close">&times;</span>
-    
+    </div>
+    <div class="rlistitem" draggable="true">
+      Title: Book 2, Author: Brian Keane, Text Type: Book
+      <span class="close">&times;</span>
+    </div>
 </div>
 
 <div id="overlay"></div>
@@ -72,7 +79,7 @@
     <script src="/readinglist.53fea4d4.js"></script>
 
 
-  </div></div></main>
+  </main>
 
   </body>
 </div></html> 

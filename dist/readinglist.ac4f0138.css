@@ -25,9 +25,11 @@ body {
   display: flex;
 }
 
-.todo-container {
+.rlist_container {
   width: 1000px;
-  height: 80vh;
+  height: 10vh;
+  flex-direction: column;
+  align-items: stretch;
   display: flex;
 }
 
@@ -55,10 +57,10 @@ body {
   background-color: #0b0ee3;
 }
 
-.todo {
+.rlistitem {
+  height: 3rem;
   background-color: #fff;
   border-radius: 4px;
-  justify-content: space-between;
   align-items: center;
   margin: .5rem 0;
   padding: .5rem 1rem;
@@ -68,7 +70,7 @@ body {
   box-shadow: 0 0 0 1px #0f0f0f1a, 0 2px 4px #0f0f0f1a;
 }
 
-.todo .close {
+.rlistitem .close {
   color: #ccc;
   cursor: pointer;
   font-size: 2rem;
@@ -77,7 +79,7 @@ body {
   right: 1rem;
 }
 
-.todo .close:hover {
+.rlistitem .close:hover {
   color: #343444;
 }
 
@@ -97,7 +99,7 @@ body {
   position: fixed;
   top: -50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -20%);
 }
 
 .modal.active {
@@ -131,13 +133,13 @@ body {
   display: block;
 }
 
-.todo_input_text, #todo_submit {
+.rlist_input_text, #rlist_submit {
   width: 100%;
   margin: .25rem;
   padding: .5rem 1rem;
 }
 
-#todo_submit {
+#rlist_submit {
   color: #f3f3f3;
   background-color: #4caf50;
   border: none;
