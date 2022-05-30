@@ -118,7 +118,7 @@ function createTodo() {
   todo_div.addEventListener("dragend", dragEnd);
 
   document.getElementById("todo_input_task").value = "";
-  todo_form.classList.remove("active");
+  // todo_form.classList.remove("active");
   overlay.classList.remove("active");
 }
 
@@ -129,3 +129,5 @@ close_btns.forEach((btn) => {
     btn.parentElement.style.display = "none";
   });
 });
+
+

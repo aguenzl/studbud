@@ -2,36 +2,28 @@
     box-sizing: border-box;
   }
   
-  .header {
-    font-size: 2vw;
-    text-align: center;
-    font-family: 'Inter';
-    color: #242582;
-    margin-bottom: 1vh;
-    /* margin-top: 8vh;  */
-    }
+
 
   .text-title {
-    font-size: 2vw;
+    font-size: 5vw;
     text-align: center;
     font-family: 'Inter';
     color: #242582;
-    margin-bottom: 8vh;
+    // margin-bottom: vh;
   }
 
   body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter';
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
+  //  display: flex;
+  //  justify-content: center;
   }
   
   .rlist_container {
     width: 1000px;
-    height: 10vh;
     display: flex;
     align-items: stretch;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   
   .status {
@@ -51,11 +43,31 @@
     border: none;
     width: 50px;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     margin: 0.5rem 0;
     cursor: pointer;
   }
   
+  @media screen and (max-width: 600px) {
+    #add_btn {
+      font-size: 5vw;
+    }
+  }
+
+// style the button that opens all the links. Make it consistent to the other buttons on the task list page. 
+#open_all_btn {
+  padding: 0.5rem 1rem;
+  background-color: #242582;
+  color: white;
+  outline: none;
+  border: none;
+  width: 10%;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
   #add_btn:hover {
     background-color: #0B0EE3;
   }
@@ -66,15 +78,25 @@
     align-items: center;
     position: relative;
     background-color: #fff;
-    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
-      rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    box-shadow: #0000ff 0px 0px 0px 1px,
+    #0000ff 0px 2px 4px;
     border-radius: 4px;
     padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
+    color: #0000ff; 
     margin: 0.5rem 0;
+    text-decoration: underline;
     height: 3rem;
- //   width: 90%;
   }
+
+  @media screen and (max-width: 600px) {
+    .rlistitem {
+      max-width:40%;
+      font-size: 3vw;
+      height: 5rem;
+    }
+  }
+  
   
   .rlistitem .close {
     position: absolute;
@@ -86,25 +108,46 @@
   }
   
   .rlistitem .close:hover {
-    color: #343444;
+    color: red;
+  }
+
+  .rlistitem .popout {
+    position: absolute;
+    right: 3rem;
+    top: 0rem;
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
   }
   
+  .rlistitem .popout:hover {
+    color: blue;
+  }
+
+  .rlistitem .edit {
+    position: absolute;
+    right: 5rem;
+    top: 0rem;
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .rlistitem .edit:hover {
+    color: yellow;
+  }
+
+
   /* modal */
   
-  .close-modal {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-  
 
-  }
   
   .modal {
     width: 450px;
     position: fixed;
     top: -50%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -50%);
     transition: top 0.3s ease-in-out;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -113,7 +156,7 @@
   }
   
   .modal.active {
-    top: 15%;
+    top: 50%;
   }
   
   .modal .header {

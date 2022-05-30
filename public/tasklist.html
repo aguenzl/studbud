@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="/public/scss/main.scss" rel="stylesheet" type="text/css"> 
+    <link href="/public/scss/base/main.scss" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href="/public/scss/components/tasklist.scss" rel="stylesheet" type="text/css">
   </head>
@@ -20,6 +20,7 @@
       <nav class="nav">
         <ul>
         <!-- <li><img src = "./images/logo.png" class = "navimage"></a></li> -->
+        <li><img src = "./images/logo.png" class = "navimage"></a></li>
         <li><a href ="index.html">Home</a></li>
         <li><a class = "current" href="tasklist.html">Task List</a></li>
         <li><div class="dropdown">
@@ -31,7 +32,8 @@
         </div></li>
                       <li><a href="music.html">Music</a></li>
         <li><a href="readinglist.html">Reading List</a></li>
-        <li><a href="musictest.html">Test</a></li>
+        <li><a href="column.html">Test</a></li>
+
       </ul>
       </nav>
       <main class = "main">
@@ -68,6 +70,7 @@ The user can then drag the task around to  -->
     <input type="submit" value="Add Task" id="todo_submit" />
   </div>
 </div>
+
 <!-- The todo container -->
 <div class="todo-container">
   <div class="status" id="no_status">
@@ -90,12 +93,13 @@ The user can then drag the task around to  -->
 </div>
           </div>
 
-     
-          
-
- 
 
 <div id="overlay"></div>
+
+<iframe title="deezer-widget" src="https://widget.deezer.com/widget/light/playlist/1313616925" width="20%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+</div>
+<div class = "widgettext">Music widget kindly provided by <a href = "https://deezer.com">Deezer</a> </div>  
+
 
     <script src="scss/components/tasklist.js"></script>
 

@@ -18,12 +18,6 @@
   font-size: 1.5vw;
 }
 
-@media screen and (max-width: 600px) {
-  .bodytext {
-    font-size: 3vw;
-  }
-}
-
 footer {
   text-align: center;
   width: 100%;

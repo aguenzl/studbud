@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" type = "image/png" href = "images/favicon.png"
+    <link rel="shortcut icon" type = "image/png" href = "images/favicon.png"
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="/public/scss/base/main.scss" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="/public/scss/components/tasklist.scss" rel="stylesheet" type="text/css">
+  </head>
+    
+  <body>
+
+    <!-- The class for 'Task List' is set to current as that is the page the user is on. -->
+    <div class="containerindex">
+      <nav class="nav">
+        <ul>
+          <!-- <li><img src = "./images/logo.png" class = "navimage"></a></li> -->
+          <li><img src = "./images/logo.png" class = "navimage"></a></li>
+          <li><a href ="index.html">Home</a></li>
+          <li><a href="tasklist.html">Task List</a></li>
+          <li><div class="dropdown">
+            <button class="dropbtn">Timer</button>
+            <div class="dropdown-content">
+              <a href="stopwatch.html">Stopwatch</a>
+              <a href="flowtimetracker.html">Flow Time Tracker</a>
+            </div>
+          </div></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="readinglist.html">Reading List</a></li>
+          <li><a class = "current" href="column.html">Test</a></li>
+        </ul>
+      </nav>
+      <main class = "main">
+        <header class = "header">Task List</header>
+        <div class = "bodytext">Welcome to the Kanban Board/Task List! This is where you can add all your tasks. Click "Add Task" to add a task and fill out the details in the form. 
+          Click "Submit" to see the task on the board. Click and drag the task to different columns depending on the status of the task.
+        You can also add new columns using the "Add Column" button, and rename them by double-clicking on the heading.  </div>
+        <div class="container">
+          <!-- This is the modal. The modal is the form that pops up when '+ Add Task' is clicked, where the user can fill out
+          details about the task. They click 'Add Task' after filling out the details and it will automatically pop up under "No Status".
+          The user can then drag the task around to  -->
+          <div class="modal" id="todo_form">
+            <div class="header">
+              <div class="title">Add Task</div>
+              <button class="btn close-modal">&times;</button>
+            </div> <!-- header -->
+            
+            <div class="body">
+              <!-- The user inputs the details below. The due date input time is set to a date format and the class and id is set so it can 
+              be referred to in css and javascript. the estimated completion time requires inputting a number, and the task priority is a drop down 
+              menu where the user must select one of the three options.  -->
+             Task Name: <input type="text" class="todo_input_text" id="todo_input_task" />
+              Due Date: <input type="date" class="todo_input_text" id="todo_input_duedate" />
+              Estimated completion time (in mins): <input type="number" class="todo_input_text" id="todo_input_estcompletiontime" />
+              Task Priority: <select name="priority" input type="label" class="todo_input_text" id="todo_input_taskpriority" <label for="priority"></label><br>
+                <option value="">Select one</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+              <!-- This submits the data and makes it reflect on the screen. -->
+              <input type="submit" value="Submit" id="todo_submit" />
+            </div>  <!-- body -->
+          </div> <!-- modal -->
+
+          <div class="modal" id="edit_header_form">
+            <div class="header">
+              <div class="title">Edit Status</div>
+              <button class="btn close-modal">&times;</button>
+            </div> <!-- header -->
+            <div class = "task-title">
+              <div class = "task-header">Rename</div>
+            </div> <!-- task-title -->
+            <div class="body">
+              <input type="text" class="todo_input_text" id="input_status_header" />
+
+              <!-- This submits the data and makes it reflect on the screen. -->
+              <input type="submit" value="Save Changes" id="status_submit" />
+            </div>  <!-- body -->
+          </div>
+
+          <!-- The todo container -->
+          <button id="add_column_btn">Add Column</button>
+          <div class="todo-container" id="task_list_table">
+            <div class="status" id="no_status">
+              <h1 class="status_header">No Status</h1>
+              <button id="add_btn" data-target-modal="#todo_form">+ Add Task</button>
+              <!-- <div class="todo" draggable="true">
+               Task: Morning Yoga, Due Date: 2022-06-10, Estimated Completion Time: 30mins, Priority: Medium
+                <span class="close">&times;</span>
+              </div> -->
+            </div>
+            <div class="status">
+              <h1 class="status_header">Not Started</h1>
+            </div>
+            <div class="status">
+              <h1 class="status_header">In Progress</h1>
+            </div>
+            <div class="status">
+              <h1 class="status_header">Done</h1>
+            </div>
+          </div>
+        </div>
+
+        <div id="overlay"></div>
+
+        <!-- <iframe title="deezer-widget" src="https://widget.deezer.com/widget/light/playlist/1313616925" width="20%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+        </div>
+        <div class = "widgettext">Music widget kindly provided by <a href = "https://deezer.com">Deezer</a> </div>   -->
+
+        <script src="scss/components/column.js"></script>
+      </main>
+    </div> <!-- container-index -->
+  </body>
+</html> 

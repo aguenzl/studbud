@@ -93,7 +93,7 @@ function createTodo() {
     todo_div.addEventListener("dragstart", dragStart);
     todo_div.addEventListener("dragend", dragEnd);
     document.getElementById("todo_input_task").value = "";
-    todo_form.classList.remove("active");
+    // todo_form.classList.remove("active");
     overlay.classList.remove("active");
 }
 const close_btns = document.querySelectorAll(".close");

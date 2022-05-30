@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,18 +7,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="/public/scss/main.scss" rel="stylesheet" type="text/css"> 
+    <link href="/public/scss/base/main.scss" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link href="/public/scss/components/music.scss" rel="stylesheet" type="text/css">
+    <!-- <link href="/public/scss/components/music.scss" rel="stylesheet" type="text/css"> -->
   </head>
 
     <body>
-      <div class="containerindex">
-
+   
       <nav class="nav">
         <ul>
-          <li><img src = "./images/logo.png" class = "navimage"></a></li>
-          <li><a href ="index.html">Home</a></li>
+        <li><img src = "./images/logo.png" class = "navimage"></a></li>
+        <li><a href ="index.html">Home</a></li>
         <li><a href="tasklist.html">Task List</a></li>
         <li><div class="dropdown">
           <button class="dropbtn">Timer</button>
@@ -26,38 +26,26 @@
             <a href="flowtimetracker.html">Flow Time Tracker</a>
           </div>
         </div></li>
-                      <li><a href="music.html">Music</a></li>
+                      <li><a class = "current" href="music.html">Music</a></li>
         <li><a href="readinglist.html">Reading List</a></li>
-        <li><a class = "current" href="musictest.html">Test</a></li>
       </ul>
       </nav>
 
-
+      <div class="containerindex">
         <main class = "main">
             <header class = "header">Music</header>
 
+            <div class="container">
 
-            <aside class="aside">
-              <!-- Internal aside container for sticky positioning -->
-              <div class="aside-container">
-                <h2>Favourites</h2>
-                <ul>
-                  <!-- This should remain empty - our content will be dynamically loaded from local storage -->
-                </ul>
-                <button id="clear">Clear Favourites</button>
+              <div class = "bodytext">
+                Click the play button to listen to the music. More coming soon! 
+    
               </div>
-            </aside>
-        
-            <!-- Footer -->
-            <footer class="footer">
-              <p>Made using the <a href="https://ghibliapi.herokuapp.com/">Studio Ghibli API</a>.</p>
-            </footer>
-          </div>    
+              <iframe title="deezer-widget" src="https://widget.deezer.com/widget/light/playlist/1313616925" width="80%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+            </div>
+            <div class = "bodytext">Music widget kindly provided by <a href = "https://deezer.com">Deezer</a> </div>  
 
 
-
-
-            
 
             <script src="scss/components/music.js"></script>
 
@@ -66,4 +54,7 @@
     
         </main>
         </body>
+
       </html>
+
+            

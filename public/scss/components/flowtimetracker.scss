@@ -34,6 +34,16 @@ body{
 }
 
 
+@media screen and (max-width: 600px) {
+  .flowDisplay {
+    width: 80%;
+    left: 10%;
+    padding: 80px 0;
+    font-size: 6vw;
+  }
+}
+
+
 .breakDisplay {
   position: relative;
   width: 30%;
@@ -50,7 +60,16 @@ body{
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0,1,116,0.25);
   margin-bottom: 2vh;
+}
 
+
+@media screen and (max-width: 600px) {
+  .breakDisplay {
+    width: 60%;
+    left: 20%;
+    padding: 40px 0;
+    font-size: 4vw;
+  }
 }
 
 .interruptDisplay {
@@ -68,6 +87,15 @@ body{
   justify-content: space-around;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0,1,116,0.25);
+}
+
+@media screen and (max-width: 600px) {
+  .interruptDisplay {
+    width: 60%;
+    left: 20%;
+    padding: 40px 0;
+    font-size: 3vw;
+  }
 }
 
 .buttons{
@@ -89,11 +117,23 @@ body{
     outline: none;
 }
 
-// .flowDisplay > .started {
-  // background-color: green;
-  // color: white; 
-// }
 
+
+
+@media screen and (max-width: 600px) {
+  .buttons {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .buttons button{
+    font-size: 4vw;
+  }
+}
 
 // the control flow refers to the flow timer tracker starting and stop - meaning it is the 'Start Flow' button. It is set to green. 
 #controlFlow {
@@ -104,27 +144,38 @@ body{
   background-color: orange;
 }
 
+@media screen and (max-width: 600px) {
+  #breakFlow {
+    margin-top: 5vh;
+  }
+}
+
+
 // this is when the user reports an external unintentional interruption. It is set to red. 
 #interruptFlow {
   background-color: red;
 }
 
- // the standard stylistic elements of the body text. Spacing is given on the left, right and bottom so it is spaced
- // out evenly from everything else. 
-.bodytext {
-  font-size: 1vw;
-  font-family: 'Inter';
-  color: #242582;
-  text-align: center;
-  margin-bottom: 5vh; 
-  margin-left: 5vw;
-  margin-right: 5vw;
+// spaces out the interrupt button so it's spaced out from the break button. 
+@media screen and (max-width: 600px) {
+  #interruptFlow {
+    margin-top: 5vh;
+  }
+}
+
+
+
+// adjusts the size of the body text so it's a bigger size on the mobile screen.
+  @media screen and (max-width: 600px) {
+    .bodytext{
+      font-size: 4vw;
   
+    }
   }
 
 
 
-
+// styles the title of the Flow Log so it's big yet spaced out far from the timer and buttons. 
   .flowLogTitle {
     font-size: 2vw;
     font-weight: bold;
@@ -136,6 +187,17 @@ body{
     margin-right: 5vw;
     }
 
+    // makes the font bigger on the mobile screen. 
+    @media screen and (max-width: 600px) {
+      .flowLogTitle{
+        font-size: 5vw;
+    
+      }
+    }
+
+
+
+// this is similar styling to the body text. 
   .flowLog {
   font-size: 1vw;
   font-family: 'Inter';
@@ -146,4 +208,9 @@ body{
   margin-right: 5vw;
   }
 
-  
+  // makes the font bigger on the mobile screen.
+  @media screen and (max-width: 600px) {
+    .flowLog{
+      font-size: 3vw;
+    }
+  }

@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
   }
@@ -16,12 +18,25 @@
 
 // this is the title when the modal pops up. 
   .task-header {
-    font-size: 2vw;
+    font-size: 1vw;
     text-align: center;
     font-family: 'Inter';
     color: #242582;
-    margin-bottom: 2vh;
+    margin-bottom: 0.5vh;
   }
+
+  .title {
+    font-size: 1.5vw;
+  }
+
+  @media screen and (max-width: 600px) {
+    .todo-container {
+      width: 500px;
+      height: 70vh;
+    } 
+  }
+
+  
 
   // style the input titles when the modal pops up.
   body {
@@ -33,12 +48,20 @@
   
   // style the columns and give them a pink border. 
   .todo-container {
-    width: 1000px;
+    width: 1800px;
     height: 70vh;
     display: flex;
     border: 1px solid #F64C72;
-
   }
+
+  @media screen and (max-width: 600px) {
+    .todo-container {
+      width: 500px;
+      height: 70vh;
+    } 
+  }
+
+
   
   // style the columns. 
   .status {
@@ -47,6 +70,13 @@
     position: relative;
     padding: 60px 1rem 0.5rem;
   }
+
+
+  // @media screen and (max-width: 600px) {
+  //   .status {
+  //     padding: 80px 3rem 0.5rem;
+  //   } 
+  // }
   
   // change the colour of every even column to a lighter pink. 
   .status:nth-child(even) {
@@ -65,7 +95,42 @@
     margin: 0;
     width: 100%;
     padding: 0.5rem 1rem;
+    font-size: 1vw;
+    cursor: pointer;
   }
+
+  @media screen and (max-width: 600px) {
+    .status h1 {
+      font-size: 1vh;
+    } 
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .header {
+      font-size: 4vh;
+    }
+  }
+  #add_column_btn {
+    padding: 0.5rem 1rem;
+    background-color: #242582;
+    color: white;
+    outline: none;
+    border: none;
+    width: 9%;
+    font-size: 1vw;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 600px) {
+    #add_column_btn {
+      font-size: 2vw;
+      margin-left: 2vw;
+      width: 20%;
+    } 
+  }
+
 
   // this is the '+ Add Task' button. It is set to blue with white writing. The cursor changes to a pointer when 
   // it hovers so it looks like a button.
@@ -82,10 +147,19 @@
     cursor: pointer;
   }
  
+  @media screen and (max-width: 600px) {
+    #add_btn {
+      margin: 0rem 0;
+      font-size: 2vw;
+    } 
+  }
+
   // the button changes to a lighter blue when hovered over.
   #add_btn:hover {
     background-color: #0B0EE3;
   }
+
+
   
 
   // this is the contents inside the specific task. It is set to fit the writing spaced evenly. There is a shadow
@@ -104,6 +178,14 @@
     margin: 0.5rem 0;
     
   }
+
+  // @media screen and (max-width: 600px) {
+  //   .todo {
+  //     font-size: 2vh;
+
+  //   } 
+  // }
+
   
   // this is the cross next to the task where they can be deleted. It is set to a small size and positioned next to the writing.
   .todo .close {
@@ -114,7 +196,7 @@
     color: #ccc;
     cursor: pointer;
   }
-  
+
   //when the user hovers over the 'x' it changes to a dark grey colour. 
   .todo .close:hover {
     color: #343444;
@@ -146,8 +228,9 @@
   
   
   .modal.active {
-    top: 15%;
+    top: 50%;
   }
+  
   // style the header of the pop up. 
   .modal .header {
     display: flex;
@@ -162,8 +245,8 @@
     padding: 0.75rem;
   }
   
-  // #overlay {
-  //   display: none;
+  //  #overlay {
+  //    display: none;
   //   position: fixed;
   //   top: 0;
   //   left: 0;
@@ -190,7 +273,7 @@
 
   // set the style features of the submit button.
   #todo_submit {
-    background-color: #4caf50;
+    background-color: #242582;
     color: #f3f3f3;
     font-size: 1.25rem;
     border: none;

@@ -8,19 +8,6 @@
     margin-bottom:8vh;
   }
   
-  // .main {
-  // position: relative;
-  // width: 100%;
-  //  }
-  
-  // .header {
-  // font-size: 3vw;
-  // text-align: center;
-  // font-family: 'Inter';
-  // color: yellow;
-  // margin-bottom: 8vh;
-  // /* margin-top: 8vh;  */
-  // }
   
   // this makes the header mobile responsive as when the page loads on a smaller screen or on a mobile phone, 
   // the header text is enlarged.
@@ -32,12 +19,7 @@
   
   
   
-  // @media screen and (max-width: 600px) {
-  //   .animatedheader {
-  //   font-size: 8vw;
-  //   }
-  // }
-  
+
   
   // these are the stylistic elements of the body text. The font for all text is 'Inter' as it is a simple
   // yet clean font. The margins are set so there is a reasonable amount of spacing between the body text and the header 
@@ -52,24 +34,8 @@
   
   }
   
-  // 
-  // .lefttext {
-  // font-size: 1.5vw;
-  // font-family: 'Inter';
-  // text-align: left;
-  // color: #242582;
-  // margin-left: 3vh;
-  // margin-bottom: 5vh; 
-  // margin-top: 5vh;
+
   
-  // }
-  
-  
-  @media screen and (max-width: 600px) {
-    .bodytext {
-      font-size: 3vw;
-    }
-  }
   
   footer {
     overflow: hidden;

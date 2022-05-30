@@ -25,6 +25,15 @@ body {
   box-shadow: 0 0 20px #00017440;
 }
 
+@media screen and (max-width: 600px) {
+  .flowDisplay {
+    width: 80%;
+    padding: 80px 0;
+    font-size: 6vw;
+    left: 10%;
+  }
+}
+
 .breakDisplay {
   width: 30%;
   color: #fff;
@@ -42,6 +51,15 @@ body {
   box-shadow: 0 0 20px #00017440;
 }
 
+@media screen and (max-width: 600px) {
+  .breakDisplay {
+    width: 60%;
+    padding: 40px 0;
+    font-size: 4vw;
+    left: 20%;
+  }
+}
+
 .interruptDisplay {
   width: 30%;
   color: #fff;
@@ -56,6 +74,15 @@ body {
   position: relative;
   left: 35%;
   box-shadow: 0 0 20px #00017440;
+}
+
+@media screen and (max-width: 600px) {
+  .interruptDisplay {
+    width: 60%;
+    padding: 40px 0;
+    font-size: 3vw;
+    left: 20%;
+  }
 }
 
 .buttons {
@@ -77,6 +104,21 @@ body {
   font-size: 18px;
 }
 
+@media screen and (max-width: 600px) {
+  .buttons {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .buttons button {
+    font-size: 4vw;
+  }
+}
+
 #controlFlow {
   background-color: green;
 }
@@ -85,18 +127,26 @@ body {
   background-color: orange;
 }
 
+@media screen and (max-width: 600px) {
+  #breakFlow {
+    margin-top: 5vh;
+  }
+}
+
 #interruptFlow {
   background-color: red;
 }
 
-.bodytext {
-  color: #242582;
-  text-align: center;
-  margin-bottom: 5vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  font-family: Inter;
-  font-size: 1vw;
+@media screen and (max-width: 600px) {
+  #interruptFlow {
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bodytext {
+    font-size: 4vw;
+  }
 }
 
 .flowLogTitle {
@@ -110,6 +160,12 @@ body {
   font-weight: bold;
 }
 
+@media screen and (max-width: 600px) {
+  .flowLogTitle {
+    font-size: 5vw;
+  }
+}
+
 .flowLog {
   color: #242582;
   text-align: center;
@@ -117,6 +173,12 @@ body {
   margin-right: 5vw;
   font-family: Inter;
   font-size: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+  .flowLog {
+    font-size: 3vw;
+  }
 }
 
 /*# sourceMappingURL=flowtimetracker.ca83ccb6.css.map */

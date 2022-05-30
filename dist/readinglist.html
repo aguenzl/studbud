@@ -6,80 +6,85 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.effec35d.png" <meta="" charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="/index.c74267d1.css" rel="stylesheet" type="text/css"> 
+    <link href="/flowtimetracker.5a7f0204.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
     <link href="/readinglist.ac4f0138.css" rel="stylesheet" type="text/css">
   </head>
-  <div class="containerindex">
 
-  
   <body>
-    <nav class="nav">
-      <ul>
-      <li><img src="/logo.b5bfa736.png" class="navimage"></li>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/tasklist.html">Task List</a></li>
-      <li><div class="dropdown">
-        <button class="dropbtn">Timer</button>
-        <div class="dropdown-content">
-          <a href="/stopwatch.html">Stopwatch</a>
-          <a href="/flowtimetracker.html">Flow Time Tracker</a>
-        </div>
-      </div></li>
-                    <li><a href="/music.html">Music</a></li>
-      <li><a class="current" href="/readinglist.html">Reading List</a></li>
-      <li><a href="/musictest.html">Test</a></li>
-    </ul>
-    </nav>
 
-
+    <div class="containerindex">
+      <nav class="nav">
+        <ul>
+          <li><img src="/logo.b5bfa736.png" class="navimage"></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/tasklist.html">Task List</a></li>
+          <li><div class="dropdown">
+            <button class="dropbtn">Timer</button>
+            <div class="dropdown-content">
+              <a href="/stopwatch.html">Stopwatch</a>
+              <a href="/flowtimetracker.html">Flow Time Tracker</a>
+            </div>
+          </div></li>
+          <li><a href="/music.html">Music</a></li>
+          <li><a class="current" href="/readinglist.html">Reading List</a></li>
+        </ul>
+      </nav>
+  
       <main class="main">
-          <header class="header">Reading List</header>
+        <header class="header">Reading List</header>
+        <div class="container">
+          <button id="open_all_btn">Open All</button>
+          <!-- modal -->
+          <div class="modal" id="rlist_form">
+            <div class="header">
+              <div class="title">Add Reading List Item</div>
+              <button class="btn close-modal">&times;</button>
+            </div>
+            <div class="body">
+              Title: <input type="text" class="rlist_input_text" id="rlist_input_title"><br>
+              Author: <input type="text" class="rlist_input_text" id="rlist_input_author"><br>
+    
+              Text Type: <select name="texttype" input="" type="label" class="rlist_input_text" id="rlist_input_texttype"> <label for="texttype"></label> 
+                <option value="">Select one</option>
+                <option value="Book">Book</option>
+                <option value="Journal Article">Journal Article</option>
+              </select>
+              <!-- <br> -->
+              URL: <input type="text" class="rlist_input_text" id="rlist_input_url">
+              <input type="submit" value="Add Item" id="rlist_submit">
+            </div> <!-- "modal" body -->
+          </div> <!-- modal form -->
+          
+          <!-- reading list (plus Add button) -->
+          <div class="rlist_container" id="rlist_container">
+            <div><button id="add_btn" data-target-modal="#rlist_form">+</button></div>
+            <!-- <div class="rlistitem" draggable="true">
+              Title: Book 1, Author: Brian Keane, Text Type: Book -->
+              <!-- <span class="close"><a href="https://alexberenson.substack.com/" target="_blank"><img src="./images/logo.png" alt="Go to link"></a></span> -->
+              <!-- <span class="close">&times;</span> -->
+              </div>
+              
 
-          <div class="container">
+          </div> <!-- rlist_container -->
+        </main></div> <!-- container -->
 
-          </div>
+        <div id="overlay"></div> <!-- overlay -->
+        <script src="/readinglist.53fea4d4.js"></script>
 
-
-
- <!-- modal -->
- <div class="modal" id="rlist_form">
-  <div class="header">
-    <div class="title">Add Reading List Item</div>
-    <button class="btn close-modal">&times;</button>
-  </div>
-  <div class="body">
-    Title: <input type="text" class="rlist_input_text" id="rlist_input_title"><br>
-    Author: <input type="text" class="rlist_input_text" id="rlist_input_author"><br>
-    Text Type: <select name="texttype" input="" type="label" class="rlist_input_text" id="rlist_input_texttype" <label="" for="texttype">
-      <option value="">Select one</option>
-      <option value="Book">Book</option>
-      <option value="Journal Article">Journal Article</option>
-    </select><br>
-    URL: <input type="text" class="rlist_input_text" id="rlist_input_url">
-    <input type="submit" value="Add Item" id="rlist_submit">
-  </div>
-</div>
-<!-- rlist -->
-<div><button id="add_btn" data-target-modal="#rlist_form">+</button></div>
-<div class="rlist_container" id="rlist_container">
-  <!-- <div class="status" id="no_status"> -->
-    <div class="rlistitem" draggable="true">
-      Title: Book 1, Author: Brian Keane, Text Type: Book
-      <span class="close">&times;</span>
-    </div>
-    <div class="rlistitem" draggable="true">
-      Title: Book 2, Author: Brian Keane, Text Type: Book
-      <span class="close">&times;</span>
-    </div>
-</div>
-
-<div id="overlay"></div>
-
-    <script src="/readinglist.53fea4d4.js"></script>
-
-
-  </main>
-
+      
+      <!-- containerindex -->
   </body>
-</div></html> 
+</html> 
+
+<!--  <div id="overlay"></div>
+-->
+
+<!--  <iframe title="deezer-widget" src="https://widget.deezer.com/widget/light/playlist/1313616925" width="20%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+
+    <div class = "widgettext">Music widget kindly provided by <a href = "https://deezer.com">Deezer</a> </div>  
+-->
+
+
+
+

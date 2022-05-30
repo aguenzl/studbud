@@ -2,33 +2,21 @@
   box-sizing: border-box;
 }
 
-.header {
-  text-align: center;
-  color: #242582;
-  margin-bottom: 1vh;
-  font-family: Inter;
-  font-size: 2vw;
-}
-
 .text-title {
   text-align: center;
   color: #242582;
-  margin-bottom: 8vh;
   font-family: Inter;
-  font-size: 2vw;
+  font-size: 5vw;
 }
 
 body {
   min-height: 100vh;
-  justify-content: center;
-  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
+  font-family: Inter;
 }
 
 .rlist_container {
   width: 1000px;
-  height: 10vh;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: stretch;
   display: flex;
 }
@@ -50,6 +38,25 @@ body {
   outline: none;
   margin: .5rem 0;
   padding: .5rem 1rem;
+  font-size: 1.5vw;
+}
+
+@media screen and (max-width: 600px) {
+  #add_btn {
+    font-size: 5vw;
+  }
+}
+
+#open_all_btn {
+  color: #fff;
+  width: 10%;
+  cursor: pointer;
+  background-color: #242582;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
   font-size: 1.5rem;
 }
 
@@ -58,16 +65,26 @@ body {
 }
 
 .rlistitem {
+  color: #00f;
   height: 3rem;
   background-color: #fff;
   border-radius: 4px;
   align-items: center;
   margin: .5rem 0;
   padding: .5rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
+  text-decoration: underline;
   display: flex;
   position: relative;
-  box-shadow: 0 0 0 1px #0f0f0f1a, 0 2px 4px #0f0f0f1a;
+  box-shadow: 0 0 0 1px #00f, 0 2px 4px #00f;
+}
+
+@media screen and (max-width: 600px) {
+  .rlistitem {
+    max-width: 40%;
+    height: 5rem;
+    font-size: 3vw;
+  }
 }
 
 .rlistitem .close {
@@ -80,13 +97,33 @@ body {
 }
 
 .rlistitem .close:hover {
-  color: #343444;
+  color: red;
 }
 
-.close-modal {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
+.rlistitem .popout {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 3rem;
+}
+
+.rlistitem .popout:hover {
+  color: #00f;
+}
+
+.rlistitem .edit {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 5rem;
+}
+
+.rlistitem .edit:hover {
+  color: #ff0;
 }
 
 .modal {
@@ -99,11 +136,11 @@ body {
   position: fixed;
   top: -50%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-50%, -50%);
 }
 
 .modal.active {
-  top: 15%;
+  top: 50%;
 }
 
 .modal .header {

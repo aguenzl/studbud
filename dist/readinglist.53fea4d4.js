@@ -68,52 +68,68 @@ window.onclick = (event)=>{
 };
 /* create rlist  */ const rlist_submit = document.getElementById("rlist_submit");
 // let date = (new Date()).toLocaleDateString('en-US');
-rlist_submit.addEventListener("click", createrlist);
-function createrlist() {
+rlist_submit.addEventListener("click", create_rlistitem);
+function create_rlistitem() {
     let rlist_container = document.getElementById("rlist_container");
     const rlist_div = document.createElement("div");
-    const input_texttype_val = document.getElementById("rlist_input_texttype").value;
-    const input_author_val = document.getElementById("rlist_input_author").value;
-    const input_title_val = document.getElementById("rlist_input_title").value;
-    const input_url_val = document.getElementById("rlist_input_url").value;
+    let elem_title = document.getElementById("rlist_input_title");
+    const input_title_val = elem_title.value;
+    let elem_author = document.getElementById("rlist_input_author");
+    const input_author_val = elem_author.value;
+    let elem_texttype = document.getElementById("rlist_input_texttype");
+    const input_texttype_val = elem_texttype.value;
+    let elem_url = document.getElementById("rlist_input_url");
+    const input_url_val = elem_url.value;
     /* ARIELLA: extra fields in here like the line above */ const txt = document.createTextNode("Title: " + input_title_val + ", Author: " + input_author_val + ", Text Type: " + input_texttype_val);
     rlist_div.appendChild(txt);
     rlist_div.classList.add("rlistitem");
     rlist_div.setAttribute("draggable", "true");
     /* create the pop out span */ const span_popout = document.createElement("span");
-    var eimg_popout = document.createElement("img");
-    eimg_popout.setAttribute("src", "./images/popout.png");
-    eimg_popout.setAttribute("height", "8");
-    eimg_popout.setAttribute("width", "8");
-    eimg_popout.setAttribute("alt", "Pop out to link");
-    eimg_popout.setAttribute("href", input_url_val);
-    span_popout.appendChild(eimg_popout);
+    span_popout.classList.add("popout");
+    const link_popout = document.createElement("a");
+    link_popout.href = input_url_val;
+    link_popout.target = "_blank";
+    link_popout.text = "\u2197";
+    span_popout.appendChild(link_popout);
     rlist_div.appendChild(span_popout);
-    /* create the pen (edit) span */ /* create the close span */ const span_close = document.createElement("span");
-    const span_txt = document.createTextNode("\u00D7");
+    /* create the edit span */ const span_edit = document.createElement("span");
+    span_edit.classList.add("edit");
+    const text_edit = document.createTextNode("\u0394");
+    span_edit.appendChild(text_edit);
+    rlist_div.appendChild(span_edit);
+    /* create the close span */ const span_close = document.createElement("span");
+    const text_close = document.createTextNode("\u00D7");
     span_close.classList.add("close");
-    span_close.appendChild(span_txt);
+    span_close.appendChild(text_close);
+    span_close.addEventListener("click", ()=>{
+        span_close.parentElement.style.display = "none";
+    });
     rlist_div.appendChild(span_close);
     // save the URL as an attribute for use when the user clicks the 'Open All Links' button
-    // rlist_div.setAttribute('URL', input_url_val);
-    // add the listener for when they click on the item, it opens a new window with the URL
-    // rlist_div.addEventListener('click', function() { window.open(input_url_val, '_blank');}, false);
+    rlist_div.setAttribute('item_title', input_title_val);
+    rlist_div.setAttribute('item_author', input_author_val);
+    rlist_div.setAttribute('item_type', input_texttype_val);
+    rlist_div.setAttribute('item_url', input_url_val);
     /* Add this list item div to the container */ rlist_container.appendChild(rlist_div);
-    span.addEventListener("click", ()=>{
-        span.parentElement.style.display = "none";
-    });
-    //   console.log(rlist_div);
     rlist_div.addEventListener("dragstart", dragStart);
     rlist_div.addEventListener("dragend", dragEnd);
-    // document.getElementById("rlist_input_task").value = "";
-    rlist_form.classList.remove("active");
+    // Clear out the input fields ready for next time
+    elem_title.value = "";
+    elem_author.value = "";
+    elem_texttype.value = "";
+    elem_url.value = "";
+    // rlist_form.classList.remove("active");
     overlay.classList.remove("active");
 }
+function edit_rlistitem() {}
+function set_rlistitem(elem_this_title, val_this_title, elem_this_author, val_this_author, elem_this_texttype, val_this_texttype, elem_this_url, val_this_url) {}
+function open_all_urls() {}
 const close_btns = document.querySelectorAll(".close");
 close_btns.forEach((btn)=>{
     btn.addEventListener("click", ()=>{
         btn.parentElement.style.display = "none";
     });
 });
+document.getElementById("open_all_btn").addEventListener("click", open_all_urls);
 
 //# sourceMappingURL=readinglist.53fea4d4.js.map

@@ -15,9 +15,20 @@
 .task-header {
   text-align: center;
   color: #242582;
-  margin-bottom: 2vh;
+  margin-bottom: .5vh;
   font-family: Inter;
-  font-size: 2vw;
+  font-size: 1vw;
+}
+
+.title {
+  font-size: 1.5vw;
+}
+
+@media screen and (max-width: 600px) {
+  .todo-container {
+    width: 500px;
+    height: 70vh;
+  }
 }
 
 body {
@@ -28,10 +39,17 @@ body {
 }
 
 .todo-container {
-  width: 1000px;
+  width: 1800px;
   height: 70vh;
   border: 1px solid #f64c72;
   display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .todo-container {
+    width: 500px;
+    height: 70vh;
+  }
 }
 
 .status {
@@ -48,13 +66,48 @@ body {
 .status h1 {
   color: #f3f3f3;
   width: 100%;
+  cursor: pointer;
   background-color: #f64c72;
   border: 1.5px solid #242582;
   margin: 0;
   padding: .5rem 1rem;
+  font-size: 1vw;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .status h1 {
+    font-size: 1vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 4vh;
+  }
+}
+
+#add_column_btn {
+  color: #fff;
+  width: 9%;
+  cursor: pointer;
+  background-color: #242582;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+  #add_column_btn {
+    width: 20%;
+    margin-left: 2vw;
+    font-size: 2vw;
+  }
 }
 
 #add_btn {
@@ -68,6 +121,13 @@ body {
   margin: .5rem 0;
   padding: .5rem 1rem;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  #add_btn {
+    margin: 0 0;
+    font-size: 2vw;
+  }
 }
 
 #add_btn:hover {
@@ -114,7 +174,7 @@ body {
 }
 
 .modal.active {
-  top: 15%;
+  top: 50%;
 }
 
 .modal .header {
@@ -139,7 +199,7 @@ body {
 #todo_submit {
   color: #f3f3f3;
   width: 100%;
-  background-color: #4caf50;
+  background-color: #242582;
   border: none;
   margin: .25rem;
   padding: .5rem 1rem;

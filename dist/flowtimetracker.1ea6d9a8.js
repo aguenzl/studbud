@@ -207,6 +207,8 @@ function displayFlow() {
             flowHours++;
         }
     }
+    // This makes it so if the hours, minutes or seconds on the flow timer have a value of less than ten, it will put a zero
+    // before the number as to uphold the clean timer format.
     let fh = flowHours < 10 ? "0" + flowHours : flowHours;
     let fm = flowMinutes < 10 ? "0" + flowMinutes : flowMinutes;
     let fs = flowSeconds < 10 ? "0" + flowSeconds : flowSeconds;
@@ -225,6 +227,8 @@ function displayBreak() {
             breakHours++;
         }
     }
+    // This makes it so if the hours, minutes or seconds on the break timer have a value of less than ten, it will put a zero
+    // before the number as to uphold the clean timer format.
     let bh = breakHours < 10 ? "0" + breakHours : breakHours;
     let bm = breakMinutes < 10 ? "0" + breakMinutes : breakMinutes;
     let bs = breakSeconds < 10 ? "0" + breakSeconds : breakSeconds;
@@ -243,6 +247,8 @@ function displayInterrupt() {
             interruptHours++;
         }
     }
+    // This makes it so if the hours, minutes or seconds on the interrupt timer have a value of less than ten, it will put a zero
+    // before the number as to uphold the clean timer format.
     let ih = interruptHours < 10 ? "0" + interruptHours : interruptHours;
     let im = interruptMinutes < 10 ? "0" + interruptMinutes : interruptMinutes;
     let is = interruptSeconds < 10 ? "0" + interruptSeconds : interruptSeconds;

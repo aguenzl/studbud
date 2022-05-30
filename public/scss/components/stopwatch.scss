@@ -1,27 +1,10 @@
-// *,
-// *:before,
-// *:after{
-//     padding: 0;
-//     margin: 0;
-//     box-sizing: border-box;
-// }
+
 
 body{
   background: white;
 }
 
-// .container{
-//     background-color: #F64C72;
-//     width: 40%;
-//     min-width: 500px;
-//     position: absolute;
-//     transform: translate(-50%,-50%);
-//     top: 50%;
-//     left: 50%;
-//     padding: 20px 0;
-//     padding-bottom: 50px;
-//     border-radius: 10px;
-// }
+
 
 //Sets the style for the timer. Positions it in the centre of the screen with the digits evenly spaced out. 
 // The box is given a dark blue shadow. 
@@ -39,6 +22,17 @@ body{
     justify-content: space-around;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0,1,116,0.25);
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .timerDisplay {
+    width: 80%;
+    left: 10%;
+    padding: 80px 0;
+    font-size: 6vw;
+  }
 }
 
 // the three buttons are spaced evenly from each other underneath the timer box. 
@@ -64,6 +58,19 @@ body{
     outline: none;
 }
 
+
+@media screen and (max-width: 600px) {
+  .buttons {
+    width: 80%;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .buttons button{
+    font-size: 6vw;
+  }
+}
 // this sets the second button aka second last child to green.
 .buttons button:nth-last-child(2){
     background-color: green;
