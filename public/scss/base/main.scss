@@ -45,6 +45,7 @@ nav {
 
 }
 
+// 
 @media screen and (max-width: 600px) {
   .nav {
   display: flex;
@@ -84,11 +85,20 @@ nav > ul > li a {
   display: block;
   padding: 13px 16px;
   text-decoration: none;
-
-  // animation: fall linear;
-  // animation-duration: 0.5s;
 }
 
+@keyframes fall {
+  0% {
+    transform:translateY(-100px);
+  
+  }
+  
+  
+  100% {
+  transform:translateY(0px);
+  }
+  }
+  
 
 @media screen and (max-width: 600px) {
   .nav > ul > li a {
@@ -113,13 +123,11 @@ nav > ul > li a {
   text-decoration: none;
   border: none;
 
-  // animation: fall linear;
-  // animation-duration: 0.5s; 
 }
 
 @media screen and (max-width: 600px) {
   .dropbtn {
-    font-size: 1.5vw;
+    font-size: 3vw;
   }
 }
 
@@ -136,6 +144,7 @@ background-color: #f1f1f1;
 min-width: 160px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
+
 }
 
 /* Links inside the dropdown */
@@ -174,12 +183,6 @@ transform:translateY(0px);
 
 
 
-// @media screen and (max-width: 600px) {
-//   nav > ul > li a {
-//     font-size: 10w;
-//   }
-// }
-
 
 nav > ul > li a:hover {
   background-color: #F64C72;
@@ -187,8 +190,6 @@ nav > ul > li a:hover {
 
 .navimage {
 max-width:5vw;
-animation: fall linear;
-animation-duration: 0.5s;
 }
 
 @media screen and (max-width: 600px) {

@@ -69,6 +69,16 @@ nav > ul > li a {
   display: block;
 }
 
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 600px) {
   .nav > ul > li a {
     font-size: 1.5vh;
@@ -88,7 +98,7 @@ nav > ul > li a {
 
 @media screen and (max-width: 600px) {
   .dropbtn {
-    font-size: 1.5vw;
+    font-size: 3vw;
   }
 }
 
@@ -116,27 +126,12 @@ nav > ul > li a {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #f64c72;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-100px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-nav > ul > li a:hover {
+.dropdown:hover .dropbtn, nav > ul > li a:hover {
   background-color: #f64c72;
 }
 
 .navimage {
   max-width: 5vw;
-  animation: fall .5s linear;
 }
 
 @media screen and (max-width: 600px) {

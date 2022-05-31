@@ -1,6 +1,7 @@
 const rlists = document.querySelectorAll(".rlistitem");
 // const all_status = document.querySelectorAll(".status");
 let draggablerlist = null;
+document.getElementById("open_all_btn").addEventListener("click", open_all_urls);
 rlists.forEach((rlist)=>{
     rlist.addEventListener("dragstart", dragStart);
     rlist.addEventListener("dragend", dragEnd);
@@ -90,6 +91,7 @@ function create_rlistitem() {
     link_popout.href = input_url_val;
     link_popout.target = "_blank";
     link_popout.text = "\u2197";
+    link_popout.classList.add("popout_a");
     span_popout.appendChild(link_popout);
     rlist_div.appendChild(span_popout);
     /* create the edit span */ const span_edit = document.createElement("span");
@@ -105,7 +107,7 @@ function create_rlistitem() {
         span_close.parentElement.style.display = "none";
     });
     rlist_div.appendChild(span_close);
-    // save the URL as an attribute for use when the user clicks the 'Open All Links' button
+    // save all fields as attributes for use later, eg edit or when the user clicks the 'Open All Links' button
     rlist_div.setAttribute('item_title', input_title_val);
     rlist_div.setAttribute('item_author', input_author_val);
     rlist_div.setAttribute('item_type', input_texttype_val);
@@ -121,15 +123,20 @@ function create_rlistitem() {
     // rlist_form.classList.remove("active");
     overlay.classList.remove("active");
 }
-function edit_rlistitem() {}
-function set_rlistitem(elem_this_title, val_this_title, elem_this_author, val_this_author, elem_this_texttype, val_this_texttype, elem_this_url, val_this_url) {}
-function open_all_urls() {}
+function open_all_urls() {
+    alert("For Open All to work properly, please set your browser to allow popups.");
+    // console.log("Begin open_all_urls");
+    const popout_a_list = document.querySelectorAll(".popout_a");
+    popout_a_list.forEach((popout_a)=>{
+        // console.log("Opening " + popout_a.href);
+        window.open(popout_a.href, "_blank");
+    });
+}
 const close_btns = document.querySelectorAll(".close");
 close_btns.forEach((btn)=>{
     btn.addEventListener("click", ()=>{
         btn.parentElement.style.display = "none";
     });
 });
-document.getElementById("open_all_btn").addEventListener("click", open_all_urls);
 
 //# sourceMappingURL=readinglist.53fea4d4.js.map

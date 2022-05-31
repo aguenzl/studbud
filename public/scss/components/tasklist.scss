@@ -30,6 +30,12 @@
   }
 
   @media screen and (max-width: 600px) {
+    .title {
+      font-size: 5vw;
+    } 
+  }
+
+  @media screen and (max-width: 600px) {
     .todo-container {
       width: 500px;
       height: 70vh;
@@ -48,7 +54,7 @@
   
   // style the columns and give them a pink border. 
   .todo-container {
-    width: 1800px;
+    width: 100%;
     height: 70vh;
     display: flex;
     border: 1px solid #F64C72;
@@ -125,7 +131,7 @@
 
   @media screen and (max-width: 600px) {
     #add_column_btn {
-      font-size: 2vw;
+      font-size: 2.5vw;
       margin-left: 2vw;
       width: 20%;
     } 
@@ -150,7 +156,7 @@
   @media screen and (max-width: 600px) {
     #add_btn {
       margin: 0rem 0;
-      font-size: 2vw;
+      font-size: 2.5vw;
     } 
   }
 
