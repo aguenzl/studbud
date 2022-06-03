@@ -4,21 +4,13 @@
   
 
 
-  .text-title {
-    font-size: 5vw;
-    text-align: center;
-    font-family: 'Inter';
-    color: #242582;
-    // margin-bottom: vh;
-  }
+
 
   body {
     font-family: 'Inter';
-    min-height: 100vh;
-  //  display: flex;
-  //  justify-content: center;
   }
   
+  // the items are added below each other as they are submitted.
   .rlist_container {
     width: 1000px;
     display: flex;
@@ -33,7 +25,7 @@
   }
   
 
-  
+  // make a circular add button 
   #add_btn {
     padding: 0.5rem 1rem;
     background-color: #242582;
@@ -67,6 +59,7 @@
   border-radius: 4px;
   cursor: pointer;
 }
+// make the button fit the mobile screen.
 @media screen and (max-width: 600px) {
   #open_all_btn  {
     font-size: 2.5vw;
@@ -74,14 +67,14 @@
   }
 }
 
-
+// changes colour upon hovering.
   #add_btn:hover {
     background-color: #0B0EE3;
   }
   
+  // reading list item given a blue underline and border so it is obvious it is a link.
   .rlistitem {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     position: relative;
     background-color: #fff;
@@ -104,7 +97,7 @@
     }
   }
   
-  
+
   .rlistitem .close {
     position: absolute;
     right: 1rem;
@@ -118,6 +111,7 @@
     color: red;
   }
 
+  // style the popout button so it is on the right-hand side of the item.
   .rlistitem .popout {
     position: absolute;
     right: 3rem;
@@ -145,7 +139,7 @@
   }
 
 
-  /* modal */
+  // modal //
   
 
   
@@ -157,10 +151,16 @@
     transform: translate(-50%, -50%);
     transition: top 0.3s ease-in-out;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px;
     z-index: 2;
     background-color: #fff;
   }
+
+  // @media screen and (max-width: 600px) {
+  //    .modal {
+  //     left: 50%;
+  //   }
+  // }
   
   .modal.active {
     top: 50%;
@@ -233,3 +233,8 @@
         font-size: 3vw;
       }
     }
+
+
+
+
+    

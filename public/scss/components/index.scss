@@ -34,11 +34,13 @@
   
   }
   
+  // make body text mobile responsive by making the writing bigger.
   @media screen and (max-width: 600px) {
     .bodytext {
       font-size: 3vw;
     }
   }
+
 
   
 
@@ -52,11 +54,7 @@
   }
   
   
-  canvas {
-    position: fixed;
-    top: 0;
-    z-index: -1;
-  }
+
   
   
   
@@ -71,77 +69,3 @@
   
   
   
-  
-  .current {
-   background-color: #F64C72; 
-  }
-  
-  
- nav > ul {
-   grid-area: nav; 
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  margin-bottom: 5vh;
- background-color: #242582;
-   }
-  
-  nav > ul > li {
-    float: left;
-  }
-  
- nav > ul > li a {
-    font-family: 'Inter';
-    color: white;
-    font-size: 1.5vw;
-    display: block;
-    padding: 13px 16px;
-    text-decoration: none;
-    // animation: fall linear;
-    // animation-duration: 0.5s;
-  }
-  
-  
-  
-  // @keyframes fall {
-  // 0% {
-  //   transform:translateY(-100px);
-  
-  // }
-  
-  
-  // 100% {
-  // transform:translateY(0px);
-  // }
-  // }
-  
-  
-  
-  // @media screen and (max-width: 600px) {
-  //   nav > ul > li a {
-  //     font-size: 2vw;
-  //   }
-  // }
-  
-  
- nav > ul > li a:hover {
-  background-color: #B3EAEA;
-   }
-  
- .navimage {
-  max-width:3.5vw;
-  margin-right: 2vw;
-  margin-left: 0.5vw;
-
-
-  //  animation: fall linear;
-  // animation-duration: 0.5s;
- }
-  
-  
-   @media screen and (max-width: 600px) {
-     .navimage {
-     max-width: 15vw;
-  }
-   }

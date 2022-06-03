@@ -1,12 +1,3 @@
-.grid-container {
-  grid-template-rows: .4fr 1.6fr;
-  grid-auto-rows: 1fr;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: row;
-  gap: 8px 10px;
-  display: grid;
-}
-
 .bodytext {
   color: #242582;
   text-align: center;
@@ -98,7 +89,7 @@ nav > ul > li a {
 
 @media screen and (max-width: 600px) {
   .dropbtn {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }
 
@@ -130,12 +121,12 @@ nav > ul > li a {
   background-color: #f64c72;
 }
 
-.navimage {
+.logoimage {
   max-width: 5vw;
 }
 
 @media screen and (max-width: 600px) {
-  .navimage {
+  .logoimage {
     max-width: 10vw;
   }
 }

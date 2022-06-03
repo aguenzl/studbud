@@ -3,13 +3,13 @@
 // @import "base/color";
 // @import 'components/tasklist';
 
-.grid-container {  display: grid;
-  grid-template-rows: 0.4fr 1.6fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 8px 10px;
-  grid-auto-flow: row;
-}
+// .grid-container {  display: grid;
+//   grid-template-rows: 0.4fr 1.6fr;
+//   grid-auto-columns: 1fr;
+//   grid-auto-rows: 1fr;
+//   gap: 8px 10px;
+//   grid-auto-flow: row;
+// }
 
 
  // the standard stylistic elements of the body text. Spacing is given on the left, right and bottom so it is spaced
@@ -102,7 +102,7 @@ nav > ul > li a {
 
 @media screen and (max-width: 600px) {
   .nav > ul > li a {
-    font-size: 1.5vh;
+    font-size: 2vh;
   }
 }
 
@@ -188,18 +188,19 @@ nav > ul > li a:hover {
   background-color: #F64C72;
 }
 
-.navimage {
+.logoimage {
 max-width:5vw;
 }
 
+// make the image 
 @media screen and (max-width: 600px) {
-  .navimage {
+  .logoimage {
     max-width:10vw;
   }
 }
 
 
-
+// style the heading text so it's big and bold on all pages.
 .header {
   font-size: 2vw;
   text-align: center;
@@ -210,7 +211,7 @@ max-width:5vw;
   /* margin-top: 8vh;  */
   }
 
-  // code not changing
+// make heading bigger to fit mobile screen 
   @media screen and (max-width: 600px) {
     .header {
       font-size: 4vh;
@@ -218,10 +219,9 @@ max-width:5vw;
   }
 
 
-
   
  
-  
+// the text for the widget should be the same blue colour and underneath the music player.
 .widgettext {
   color: #242582;
   display: flex;

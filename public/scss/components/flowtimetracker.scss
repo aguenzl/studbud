@@ -33,7 +33,7 @@ body{
     margin-bottom: 2vh;
 }
 
-
+// changes the size of the flow timer so it fits on the mobile screen.
 @media screen and (max-width: 600px) {
   .flowDisplay {
     width: 80%;
@@ -43,7 +43,7 @@ body{
   }
 }
 
-
+// style the break timer 
 .breakDisplay {
   position: relative;
   width: 30%;
@@ -63,6 +63,7 @@ body{
 }
 
 
+// changes the size of the break timer so it fits on the mobile screen.
 @media screen and (max-width: 600px) {
   .breakDisplay {
     width: 60%;
@@ -72,6 +73,7 @@ body{
   }
 }
 
+// style the interruption timer. 
 .interruptDisplay {
   position: relative;
   width: 30%;
@@ -89,6 +91,7 @@ body{
   box-shadow: 0 0 20px rgba(0,1,116,0.25);
 }
 
+// changes the size of the interruption timer so it fits on the mobile screen.
 @media screen and (max-width: 600px) {
   .interruptDisplay {
     width: 60%;
@@ -98,19 +101,20 @@ body{
   }
 }
 
+// the buttons should be equally spread out from each other and from the end of the entire container. 
 .buttons{
     width: 50%;
     margin: 60px auto 0 auto;
     display: flex;
     justify-content: space-around;
 }
+
 .buttons button{
     width: 120px;
     height: 45px;
-    // background-color: #FF577D;
     color: #ffffff;
     border: none;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Inter';
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
@@ -119,7 +123,8 @@ body{
 
 
 
-
+// make the buttons mobile responsive by aligning them into columns down the page so it's easy for users to select each button
+// on the small screen.
 @media screen and (max-width: 600px) {
   .buttons {
     width: 80%;
@@ -129,9 +134,10 @@ body{
   }
 }
 
+// make the font a big enough size on the mobile phone so it fills the button.
 @media screen and (max-width: 600px) {
   .buttons button{
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 
@@ -144,6 +150,7 @@ body{
   background-color: orange;
 }
 
+// create spacing between the timers on the mobile phone so it isn't cluttered.
 @media screen and (max-width: 600px) {
   #breakFlow {
     margin-top: 5vh;

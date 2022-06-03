@@ -1,26 +1,30 @@
-//
+// establish all the html/css elements to be used here. 
 const todos = document.querySelectorAll(".todo");
 const all_status = document.querySelectorAll(".status");
 const all_status_headers = document.querySelectorAll(".status_header");
 let formEditStatusHeader = document.getElementById("edit_header_form");
 let draggableTodo = null;
+// Establish event listeners for when the task is first clicked and dragged and when it is dropped in another status column.
+// Drag start first occurs when the task itself is clicked and moved. 
+// Drag end occurs when there is no more dragging.
 todos.forEach((todo)=>{
     todo.addEventListener("dragstart", dragStart);
     todo.addEventListener("dragend", dragEnd);
 });
+// create a function (for the event listener) when the user first drags the task so it can easily move according to how the user is dragging the mouse.
 function dragStart() {
     draggableTodo = this;
     setTimeout(()=>{
         this.style.display = "none";
     }, 0);
-    console.log("dragStart");
 }
+// create a function (for the event listener) for when the user stops dragging the task so it is displayed as a block under the correct heading. 
+// set draggableTodo to null as there shouldn't be anymore dragging when it is ended.
 function dragEnd() {
     draggableTodo = null;
     setTimeout(()=>{
         this.style.display = "block";
     }, 0);
-    console.log("dragEnd");
 }
 all_status.forEach((status)=>{
     status.addEventListener("dragover", dragOver);
@@ -29,29 +33,28 @@ all_status.forEach((status)=>{
     status.addEventListener("drop", dragDrop);
 });
 all_status_headers.forEach((status_header)=>{
-    // console.log("Setting up status header listener function");
     status_header.addEventListener("dblclick", editStatusHeader);
 });
+// when draggable element is over the container. Prevents user from being able to drag outside the container.  
 function dragOver(e) {
     e.preventDefault();
-//   console.log("dragOver");
 }
 function dragEnter() {
     this.style.border = "1px dashed #ccc";
-    console.log("dragEnter");
 }
 function dragLeave() {
     this.style.border = "none";
-    console.log("dragLeave");
 }
+// this function occurs when the task is dropped under a status heading
 function dragDrop() {
     this.style.border = "none";
     this.appendChild(draggableTodo);
-    console.log("dropped");
 }
-/* modal */ const btns = document.querySelectorAll("[data-target-modal]");
+// modal //
+const btns = document.querySelectorAll("[data-target-modal]");
 const close_modals = document.querySelectorAll(".close-modal");
 const overlay = document.getElementById("overlay");
+// add an event listener that triggers the modal to pop up when add button is clicked. 
 btns.forEach((btn)=>{
     btn.addEventListener("click", ()=>{
         document.querySelector(btn.dataset.targetModal).classList.add("active");
@@ -63,8 +66,6 @@ function editStatusHeader() {
     formEditStatusHeader.classList.add("active");
     overlay.classList.add("active");
     // Remove all previous header_editing id's 
-    // let targetHeaders = document.querySelectorAll(".header_editing");
-    // targetHeaders.forEach((targetHeader) => { targetHeader.classList.remove("header_editing"); });
     document.querySelectorAll(".header_editing").forEach((targetHeader)=>{
         targetHeader.classList.remove("header_editing");
     });
@@ -83,21 +84,22 @@ close_modals.forEach((btn)=>{
         document.querySelectorAll(".header_editing").forEach((targetHeader)=>{
             targetHeader.classList.remove("header_editing");
         });
-        console.log("close_modals");
     });
 });
+// activates the modal on click. Triggers the overlay.
 window.onclick = (event)=>{
     if (event.target == overlay) {
         const modals = document.querySelectorAll(".modal");
         modals.forEach((modal)=>modal.classList.remove("active")
         );
         overlay.classList.remove("active");
-    // console.log("window.onclick");
     }
 };
-/* create todo  */ const todo_submit = document.getElementById("todo_submit");
-// let date = (new Date()).toLocaleDateString('en-US');
+// create todo  //
+const todo_submit = document.getElementById("todo_submit");
 todo_submit.addEventListener("click", createTodo);
+// create a function to get all the information about the task itself from the HTML and display it in a specific text format when 
+// the task is submitted. 
 function createTodo() {
     const todo_div = document.createElement("div");
     const input_task_val = document.getElementById("todo_input_task").value;
@@ -108,7 +110,8 @@ function createTodo() {
     todo_div.appendChild(txt);
     todo_div.classList.add("todo");
     todo_div.setAttribute("draggable", "true");
-    /* create span */ const span = document.createElement("span");
+    // create span to close the modal when the 'x' button is clicked. //
+    const span = document.createElement("span");
     const span_txt = document.createTextNode("\u00D7");
     span.classList.add("close");
     span.appendChild(span_txt);
@@ -117,7 +120,6 @@ function createTodo() {
     span.addEventListener("click", ()=>{
         span.parentElement.style.display = "none";
     });
-    //   console.log(todo_div);
     todo_div.addEventListener("dragstart", dragStart);
     todo_div.addEventListener("dragend", dragEnd);
     document.getElementById("todo_input_task").value = "";
@@ -135,12 +137,10 @@ close_btns.forEach((btn)=>{
 const status_submit = document.getElementById("status_submit");
 status_submit.addEventListener("click", changeStatusHeader);
 function changeStatusHeader() {
-    // console.log("changeStatusHeader function");
     let targetHeaders = document.querySelectorAll(".header_editing");
     targetHeaders.forEach((targetHeader)=>{
         targetHeader.innerText = document.getElementById("input_status_header").value;
         targetHeader.classList.remove("header_editing");
-    //    console.log(targetHeader);
     });
     overlay.classList.remove("active");
     document.getElementById("edit_header_form").classList.remove("active");
@@ -163,6 +163,7 @@ function addColumn() {
     newdiv.addEventListener("dragleave", dragLeave);
     newdiv.addEventListener("drop", dragDrop);
 }
+// set up event listener so columns can be added when the button is clicked.
 document.getElementById("add_column_btn").addEventListener("click", addColumn);
 
 //# sourceMappingURL=index.b90b7503.js.map

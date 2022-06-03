@@ -100,7 +100,7 @@ body {
   border: none;
   border-radius: 5px;
   outline: none;
-  font-family: Poppins, sans-serif;
+  font-family: Inter;
   font-size: 18px;
 }
 
@@ -115,7 +115,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .buttons button {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 

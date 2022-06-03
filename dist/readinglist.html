@@ -1,81 +1,94 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <link rel="shortcut icon" type="image/png" href="/favicon.effec35d.png" <meta="" charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="/flowtimetracker.5a7f0204.css" rel="stylesheet" type="text/css">
+    <link href="/readinglist.5a7f0204.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
     <link href="/readinglist.ac4f0138.css" rel="stylesheet" type="text/css">
   </head>
 
-  <body>
+    <body>
+      <div class="containerindex">
 
-    <div class="containerindex">
       <nav class="nav">
         <ul>
-          <li><img src="/logo.b5bfa736.png" class="navimage"></li>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/tasklist.html">Task List</a></li>
-          <li><div class="dropdown">
-            <button class="dropbtn">Timer</button>
-            <div class="dropdown-content">
-              <a href="/stopwatch.html">Stopwatch</a>
-              <a href="/flowtimetracker.html">Flow Time Tracker</a>
-            </div>
-          </div></li>
-          <li><a href="/music.html">Music</a></li>
-          <li><a class="current" href="/readinglist.html">Reading List</a></li>
-        </ul>
+        <li><img src="/logo.b5bfa736.png" class="logoimage"></li>
+         <li><a href="/index.html">Home</a></li>
+        <li><a href="/tasklist.html">Task List</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Timer</button>
+          <div class="dropdown-content">
+            <a href="/stopwatch.html">Stopwatch</a>
+            <a href="/flowtimetracker.html">Flow Time Tracker</a>
+          </div>
+        </div></li>
+                      <li><a href="/music.html">Music</a></li>
+        <li><a class="current" href="/readinglist.html">Reading List</a></li>
+      </ul>
       </nav>
-  
-      <main class="main">
-        <header class="header">Reading List</header>
-        <div class="bodytext">This is where you can add any texts to your reading list. Click the plus button to get started! </div>
-        <div class="container">
-          <button id="open_all_btn">Open All</button>
-          <!-- modal -->
+
+
+        <main class="main">
+            <header class="header">Reading List</header>
+
+            <div class="bodytext">This is where you can add any texts to your reading list. Click the plus button to get started! </div>
+              
+            <div class="body">
+              <button id="add_btn" data-target-modal="#rlist_form">+</button>
+              <button id="open_all_btn">Open All</button>
+          <!-- add the modal -->
           <div class="modal" id="rlist_form">
             <div class="header">
+          <!-- add the title to the modal form -->
               <div class="title">Add Reading List Item</div>
+          <!-- add the exit button to the modal form -->
               <button class="btn close-modal">&times;</button>
             </div>
             <div class="body">
+       <!-- add the titles of the information needed from the user about the text as well as a text box for inputting that information. -->
               Title: <input type="text" class="rlist_input_text" id="rlist_input_title"><br>
               Author: <input type="text" class="rlist_input_text" id="rlist_input_author"><br>
-    
+     <!-- add a selection option for the user to choose between -->
               Text Type: <select name="texttype" input="" type="label" class="rlist_input_text" id="rlist_input_texttype"> <label for="texttype"></label> 
                 <option value="">Select one</option>
                 <option value="Book">Book</option>
                 <option value="Journal Article">Journal Article</option>
+                <option value="Magazine">Magazine</option>
+                <option value="Podcast">Podcast</option>
               </select>
               <!-- <br> -->
+             <!-- add a url inputting textbox which won't be visible once the user submits the data. -->
               URL: <input type="text" class="rlist_input_text" id="rlist_input_url">
+             <!-- add the submit button -->
               <input type="submit" value="Add Item" id="rlist_submit">
             </div> <!-- "modal" body -->
           </div> <!-- modal form -->
-          
-          <!-- reading list (plus Add button) -->
-          <div class="rlist_container" id="rlist_container">
-            <div><button id="add_btn" data-target-modal="#rlist_form">+</button></div>
-          </div> <!-- rlist_container -->
-        </div> <!-- container -->
 
-        <div id="overlay"></div> <!-- overlay -->
-        <script src="/readinglist.53fea4d4.js"></script>
+  <!-- reading list (plus Add button) -->
+    <div class="rlist_container" id="rlist_container">
+     <!-- <button id="add_btn" data-target-modal="#rlist_form">+</button> -->
 
-      </main>
-    </div>  <!-- containerindex -->
-  </body>
-</html> 
+        </div> <!-- rlist_container -->
+          </div> <!-- container -->
+      
 
- <div id="overlay"></div>
+        <div id="overlay"></div> 
 
- <iframe title="deezer-widget" src="https://widget.deezer.com/widget/light/playlist/4735679268" width="30%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+      </main></div>  <!-- containerindex -->
 
-    <div class="widgettext">Music widget kindly provided by <a href="https://deezer.com">Deezer</a> </div>  
-
-
+           
+ <!-- add the music player so the user can see what they're listening to on this page -->
+              <iframe title="deezer-widget" src="https://widget.deezer.com/widget/light/playlist/4735679268" width="30%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+            
+            <div class="widgettext">Music widget kindly provided by <a href="https://deezer.com"> Deezer</a> </div>  
+        
+            <script src="/readinglist.53fea4d4.js"></script>
 
 
+
+    
+        
+        </body>
+      </html>

@@ -50,11 +50,15 @@ body {
 @media screen and (max-width: 600px) {
   .buttons {
     width: 80%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
   }
 }
 
 @media screen and (max-width: 600px) {
   .buttons button {
+    margin-top: 5vh;
     font-size: 4vw;
   }
 }

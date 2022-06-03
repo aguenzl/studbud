@@ -2,15 +2,7 @@
   box-sizing: border-box;
 }
 
-.text-title {
-  text-align: center;
-  color: #242582;
-  font-family: Inter;
-  font-size: 5vw;
-}
-
 body {
-  min-height: 100vh;
   font-family: Inter;
 }
 
@@ -138,7 +130,7 @@ body {
   z-index: 2;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: top .3s ease-in-out;
   position: fixed;
   top: -50%;

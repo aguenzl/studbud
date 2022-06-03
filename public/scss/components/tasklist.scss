@@ -35,13 +35,6 @@
     } 
   }
 
-  @media screen and (max-width: 600px) {
-    .todo-container {
-      width: 500px;
-      height: 70vh;
-    } 
-  }
-
   
 
   // style the input titles when the modal pops up.
@@ -60,9 +53,10 @@
     border: 1px solid #F64C72;
   }
 
+  // make the container mobile responsiveness by fitting the width and the height to the screen size.
   @media screen and (max-width: 600px) {
     .todo-container {
-      width: 500px;
+      width: 100%;
       height: 70vh;
     } 
   }
@@ -78,11 +72,6 @@
   }
 
 
-  // @media screen and (max-width: 600px) {
-  //   .status {
-  //     padding: 80px 3rem 0.5rem;
-  //   } 
-  // }
   
   // change the colour of every even column to a lighter pink. 
   .status:nth-child(even) {
@@ -105,9 +94,10 @@
     cursor: pointer;
   }
 
+  // make all the headings fit the mobile screen.
   @media screen and (max-width: 600px) {
     .status h1 {
-      font-size: 1vh;
+      font-size: 1.5vh;
     } 
   }
  
@@ -116,6 +106,9 @@
       font-size: 4vh;
     }
   }
+
+
+  // make a big button for the 'Add Column' option.
   #add_column_btn {
     padding: 0.5rem 1rem;
     background-color: #242582;
@@ -129,10 +122,15 @@
     cursor: pointer;
   }
 
+  // change the colour of the button when hovered over. 
+  #add_column_btn:hover {
+    background-color: #0B0EE3;
+  }
+  
+
   @media screen and (max-width: 600px) {
     #add_column_btn {
       font-size: 2.5vw;
-      margin-left: 2vw;
       width: 20%;
     } 
   }
@@ -185,12 +183,12 @@
     
   }
 
-  // @media screen and (max-width: 600px) {
-  //   .todo {
-  //     font-size: 2vh;
-
-  //   } 
-  // }
+  @media screen and (max-width: 600px) {
+    .bodytext {
+     text-align: center;
+     
+    } 
+  }
 
   
   // this is the cross next to the task where they can be deleted. It is set to a small size and positioned next to the writing.
@@ -208,15 +206,6 @@
     color: #343444;
   }
   
-  /* modal */
-  
-  // .close-modal {
-  //   background: none;
-  //   border: none;
-  //   font-size: 1.5rem;
-  
-
-  // }
   
   // set the style features for the modal. the animation is set so it slides down from the top of the screen.
   .modal {
@@ -251,19 +240,20 @@
     padding: 0.75rem;
   }
   
-  //  #overlay {
-  //    display: none;
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: rgba(0, 0, 0, 0.3);
+  // this makes sure the page is darker when the modal is clicked so the user isn't distracted.
+   #overlay {
+     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
   
-  // }
+  }
   
-  // #overlay.active {
-  //   display: block;  }
+  #overlay.active {
+    display: block;  }
   
 
     

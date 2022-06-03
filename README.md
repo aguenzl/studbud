@@ -21,6 +21,8 @@ In my mockups, I obviously conceptualized the functionality and structure of the
 
 Basir Payenda (2020, December 22) To Do App Using HTML, CSS and JavaScript (Drag & Drop)|Project #10/100 [Video file]. Retrieved from https://www.youtube.com/watch?v=m3StLl-H4CY&t=1356s
 
+Deezer (n.d) https://deezer.com
+
 Foolish Developer (2021). Create a Simple Stopwatch using JavaScript (Tutorial + Code) https://www.foolishdeveloper.com/2021/10/simple-stopwatch-using-javascript.html
 
 Make a div a link in JavaScript? (2019) https://stackoverflow.com/questions/20893280/make-a-div-a-link-in-javascript

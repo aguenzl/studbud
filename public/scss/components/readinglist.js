@@ -1,63 +1,18 @@
+// select CSS element 
 const rlists = document.querySelectorAll(".rlistitem");
-// const all_status = document.querySelectorAll(".status");
-let draggablerlist = null;
 
+// insert the element from the HTML/CSS into the document 
 document.getElementById("open_all_btn").addEventListener("click", open_all_urls);
 
-rlists.forEach((rlist) => {
-  rlist.addEventListener("dragstart", dragStart);
-  rlist.addEventListener("dragend", dragEnd);
-});
 
-function dragStart() {
-  draggablerlist = this;
-  setTimeout(() => {
-    this.style.display = "none";
-  }, 0);
-  console.log("dragStart");
-}
 
-function dragEnd() {
-  draggablerlist = null;
-  setTimeout(() => {
-    this.style.display = "block";
-  }, 0);
-  console.log("dragEnd");
-}
-
-//all_status.forEach((status) => {
-//  status.addEventListener("dragover", dragOver);
-//  status.addEventListener("dragenter", dragEnter);
-//  status.addEventListener("dragleave", dragLeave);
-//  status.addEventListener("drop", dragDrop);
-//});
-
-function dragOver(e) {
-  e.preventDefault();
-  //   console.log("dragOver");
-}
-
-function dragEnter() {
-  this.style.border = "1px dashed #ccc";
-  console.log("dragEnter");
-}
-
-function dragLeave() {
-  this.style.border = "none";
-  console.log("dragLeave");
-}
-
-function dragDrop() {
-  this.style.border = "none";
-  this.appendChild(draggablerlist);
-  console.log("dropped");
-}
-
-/* modal */
+// make the pop up modal appear on the screen when add button is pressed //
 const btns = document.querySelectorAll("[data-target-modal]");
 const close_modals = document.querySelectorAll(".close-modal");
 const overlay = document.getElementById("overlay");
 
+// activates the modal when the event listener (clicking the button) is carried out. the overlay aka grey screen behind 
+// the modal also appears.
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelector(btn.dataset.targetModal).classList.add("active");
@@ -65,6 +20,7 @@ btns.forEach((btn) => {
   });
 });
 
+// use an event listener to remove the modal and overlay when the exit button is pressed.
 close_modals.forEach((btn) => {
   btn.addEventListener("click", () => {
     const modal = btn.closest(".modal");
@@ -81,11 +37,12 @@ window.onclick = (event) => {
   }
 };
 
-/* create rlist  */
+// create list of reading list items when 'Add Item' is clicked  // 
 const rlist_submit = document.getElementById("rlist_submit");
 // let date = (new Date()).toLocaleDateString('en-US');
 rlist_submit.addEventListener("click", create_rlistitem);
 
+// create a function which returns all the information inputted by the user as a box.
 function create_rlistitem() {
   let rlist_container = document.getElementById("rlist_container");
   const rlist_div = document.createElement("div");
@@ -102,14 +59,14 @@ function create_rlistitem() {
   let elem_url = document.getElementById("rlist_input_url");
   const input_url_val = elem_url.value;
 
-/* ARIELLA: extra fields in here like the line above */
+// this creates a text node which signals the text layout of each reading list item. It returns the title of the information followed by what the 
+// user inputs.
   const txt = document.createTextNode("Title: " + input_title_val + ", Author: " + input_author_val  + ", Text Type: " + input_texttype_val);
 
   rlist_div.appendChild(txt);
   rlist_div.classList.add("rlistitem");
-  rlist_div.setAttribute("draggable", "true");
 
-  /* create the pop out span */
+  // create the pop out span so the links are opened in a different tab // 
   const span_popout = document.createElement("span");
   span_popout.classList.add("popout");
   const link_popout = document.createElement("a");
@@ -120,14 +77,14 @@ function create_rlistitem() {
   span_popout.appendChild(link_popout);
   rlist_div.appendChild(span_popout);
 
-  /* create the edit span */
+  // create the edit span //
   const span_edit = document.createElement("span");
   span_edit.classList.add("edit");
   const text_edit = document.createTextNode("\u0394");
   span_edit.appendChild(text_edit);
   rlist_div.appendChild(span_edit);
 
-  /* create the close span */
+  // create the close span //
   const span_close = document.createElement("span");
   const text_close = document.createTextNode("\u00D7");
   span_close.classList.add("close");
@@ -143,11 +100,10 @@ function create_rlistitem() {
   rlist_div.setAttribute('item_type', input_texttype_val);
   rlist_div.setAttribute('item_url', input_url_val);
   
-  /* Add this list item div to the container */
+  // Add this list item div to the container //
   rlist_container.appendChild(rlist_div);
 
-  rlist_div.addEventListener("dragstart", dragStart);
-  rlist_div.addEventListener("dragend", dragEnd);
+
 
   // Clear out the input fields ready for next time
   elem_title.value = "";
@@ -155,21 +111,21 @@ function create_rlistitem() {
   elem_texttype.value = "";
   elem_url.value = "";
 
-  // rlist_form.classList.remove("active");
   overlay.classList.remove("active");
 }
 
+// create a function which opens the url link of all reading list items into a different tab. 
 function open_all_urls () {
   alert("For Open All to work properly, please set your browser to allow popups.");
   // console.log("Begin open_all_urls");
   const popout_a_list = document.querySelectorAll(".popout_a");
   popout_a_list.forEach((popout_a) => { 
-    // console.log("Opening " + popout_a.href);
     window.open(popout_a.href, "_blank");
   });
 }
 
 const close_btns = document.querySelectorAll(".close");
+
 
 close_btns.forEach((btn) => {
   btn.addEventListener("click", () => {
