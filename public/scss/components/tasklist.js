@@ -10,7 +10,7 @@ let draggableTodo = null;
 // Drag start first occurs when the task itself is clicked and moved. 
 // Drag end occurs when there is no more dragging.
 todos.forEach((todo) => {
-  todo.addEventListener("dragstart", dragStart);
+  todo.addEventListener("dragstart", beginDrag);
   todo.addEventListener("dragend", dragEnd);
 });
 
@@ -31,6 +31,7 @@ function dragEnd() {
   }, 0);
 }
  
+
 all_status.forEach((status) => {
   status.addEventListener("dragover", dragOver);
   status.addEventListener("dragenter", dragEnter);
@@ -38,19 +39,22 @@ all_status.forEach((status) => {
   status.addEventListener("drop", dragDrop);
 });
 
+// add event listener so when status headings are double clicked, the modal pops up.
 all_status_headers.forEach((status_header) => {
   status_header.addEventListener("dblclick", editStatusHeader);
 });
 
-// when draggable element is over the container. Prevents user from being able to drag outside the container.  
+// when draggable element is over the container. Prevents user from being able to drop the task outside the container.  
 function dragOver(e) {
   e.preventDefault();
 }
 
+// style the columns when the task is being dragged across columns.
 function dragEnter() {
   this.style.border = "1px dashed #ccc";
 }
 
+// style the columns so there is no border when the task isn't being dragged.
 function dragLeave() {
   this.style.border = "none";
 }
@@ -125,6 +129,7 @@ function createTodo() {
 
   const txt = document.createTextNode("Task: " + input_task_val + ", Due Date: " + input_duedate_val + ", Est Completion Time: " + input_estcompletiontime_val + "mins" + ", Priority: " + input_priority_val);
 
+
   todo_div.appendChild(txt);
   todo_div.classList.add("todo");
   todo_div.setAttribute("draggable", "true");
@@ -138,7 +143,6 @@ function createTodo() {
   todo_div.appendChild(span);
 
   no_status.appendChild(todo_div);
-
   span.addEventListener("click", () => {
     span.parentElement.style.display = "none";
   });
@@ -150,7 +154,6 @@ function createTodo() {
   overlay.classList.remove("active");
   document.getElementById("todo_form").classList.remove("active");
 }
-
 const close_btns = document.querySelectorAll(".close");
 overlay.classList.remove("active");
 document.getElementById("edit_header_form").classList.remove("active");
@@ -164,6 +167,7 @@ close_btns.forEach((btn) => {
 const status_submit = document.getElementById("status_submit");
 status_submit.addEventListener("click", changeStatusHeader);
 
+// when the edit header modal is submitted, the old heading needs to be cleared and replaced with the new heading inputted.
 function changeStatusHeader() {
   
   let targetHeaders = document.querySelectorAll(".header_editing");
@@ -171,6 +175,8 @@ function changeStatusHeader() {
     targetHeader.innerText = document.getElementById("input_status_header").value;
     targetHeader.classList.remove("header_editing");
   });
+
+  
   
   overlay.classList.remove("active");
   document.getElementById("edit_header_form").classList.remove("active");
@@ -199,3 +205,5 @@ function addColumn() {
 }
 // set up event listener so columns can be added when the button is clicked.
 document.getElementById("add_column_btn").addEventListener("click", addColumn);
+
+// References: Basir Payenda (2020, December 22) To Do App Using HTML, CSS and JavaScript (Drag & Drop)|Project #10/100 [Video file]. Retrieved from https://www.youtube.com/watch?v=m3StLl-H4CY&t=1356s

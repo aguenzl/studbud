@@ -8,7 +8,7 @@ let draggableTodo = null;
 // Drag start first occurs when the task itself is clicked and moved. 
 // Drag end occurs when there is no more dragging.
 todos.forEach((todo)=>{
-    todo.addEventListener("dragstart", dragStart);
+    todo.addEventListener("dragstart", beginDrag);
     todo.addEventListener("dragend", dragEnd);
 });
 // create a function (for the event listener) when the user first drags the task so it can easily move according to how the user is dragging the mouse.
@@ -32,16 +32,19 @@ all_status.forEach((status)=>{
     status.addEventListener("dragleave", dragLeave);
     status.addEventListener("drop", dragDrop);
 });
+// add event listener so when status headings are double clicked, the modal pops up.
 all_status_headers.forEach((status_header)=>{
     status_header.addEventListener("dblclick", editStatusHeader);
 });
-// when draggable element is over the container. Prevents user from being able to drag outside the container.  
+// when draggable element is over the container. Prevents user from being able to drop the task outside the container.  
 function dragOver(e) {
     e.preventDefault();
 }
+// style the columns when the task is being dragged across columns.
 function dragEnter() {
     this.style.border = "1px dashed #ccc";
 }
+// style the columns so there is no border when the task isn't being dragged.
 function dragLeave() {
     this.style.border = "none";
 }
@@ -136,6 +139,7 @@ close_btns.forEach((btn)=>{
 });
 const status_submit = document.getElementById("status_submit");
 status_submit.addEventListener("click", changeStatusHeader);
+// when the edit header modal is submitted, the old heading needs to be cleared and replaced with the new heading inputted.
 function changeStatusHeader() {
     let targetHeaders = document.querySelectorAll(".header_editing");
     targetHeaders.forEach((targetHeader)=>{
@@ -164,6 +168,6 @@ function addColumn() {
     newdiv.addEventListener("drop", dragDrop);
 }
 // set up event listener so columns can be added when the button is clicked.
-document.getElementById("add_column_btn").addEventListener("click", addColumn);
+document.getElementById("add_column_btn").addEventListener("click", addColumn); // References: Basir Payenda (2020, December 22) To Do App Using HTML, CSS and JavaScript (Drag & Drop)|Project #10/100 [Video file]. Retrieved from https://www.youtube.com/watch?v=m3StLl-H4CY&t=1356s
 
 //# sourceMappingURL=index.b90b7503.js.map

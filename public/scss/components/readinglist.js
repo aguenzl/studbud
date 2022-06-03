@@ -133,3 +133,4 @@ close_btns.forEach((btn) => {
   });
 });
 
+// References: Basir Payenda (2020, December 22) To Do App Using HTML, CSS and JavaScript (Drag & Drop)|Project #10/100 [Video file]. Retrieved from https://www.youtube.com/watch?v=m3StLl-H4CY&t=1356s

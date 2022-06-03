@@ -58,6 +58,6 @@ function displayTimer() {
     let cs = centiseconds < 10 ? "0" + centiseconds : centiseconds;
     // : centiseconds < 100 ? "0" + centiseconds : centiseconds;
     timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${cs}`;
-}
+} // References: Foolish Developer (2021). Create a Simple Stopwatch using JavaScript (Tutorial + Code) https://www.foolishdeveloper.com/2021/10/simple-stopwatch-using-javascript.html
 
 //# sourceMappingURL=stopwatch.e36ad006.js.map

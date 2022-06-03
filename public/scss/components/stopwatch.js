@@ -58,3 +58,5 @@ function displayTimer(){
 
  timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${cs}`;
 }
+
+// References: Foolish Developer (2021). Create a Simple Stopwatch using JavaScript (Tutorial + Code) https://www.foolishdeveloper.com/2021/10/simple-stopwatch-using-javascript.html

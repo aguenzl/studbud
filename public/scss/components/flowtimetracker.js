@@ -240,3 +240,6 @@ function displayInterrupt(){
 function addToFlowLog(logType, logHours, logMinutes, logSeconds) {
     flowLog.innerHTML = flowLog.innerHTML + "<br> " + logType + " of duration " + formatTimeString(logHours, logMinutes, logSeconds);
 }
+
+
+// References: Foolish Developer (2021). Create a Simple Stopwatch using JavaScript (Tutorial + Code) https://www.foolishdeveloper.com/2021/10/simple-stopwatch-using-javascript.html

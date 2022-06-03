@@ -259,6 +259,6 @@ function displayInterrupt() {
 // This is the string to show the entire flow log. It will be displayed as the type (flow, break or interrupt) and the duration afterwards.
 function addToFlowLog(logType, logHours, logMinutes, logSeconds) {
     flowLog.innerHTML = flowLog.innerHTML + "<br> " + logType + " of duration " + formatTimeString(logHours, logMinutes, logSeconds);
-}
+} // References: Foolish Developer (2021). Create a Simple Stopwatch using JavaScript (Tutorial + Code) https://www.foolishdeveloper.com/2021/10/simple-stopwatch-using-javascript.html
 
 //# sourceMappingURL=flowtimetracker.1ea6d9a8.js.map
